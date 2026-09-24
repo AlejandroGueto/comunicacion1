@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloque B: Comunicación Integral - 1º Bachillerato</title>
+    <title>Bloque B: Comunicación: Elementos del hecho comunicativo</title>
     <style>
         /* ==================== VARIABLES Y RESET ==================== */
         :root {
@@ -56,19 +56,28 @@
             color: var(--primary);
             text-decoration: none;
             font-weight: 600;
-            padding: 0.5rem 1.2rem;
+            padding: 0.8rem 1.5rem;
             margin: 0.2rem;
             border-radius: 6px;
             transition: all 0.2s;
             text-transform: uppercase;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             letter-spacing: 0.5px;
+            cursor: pointer;
+            border: 2px solid transparent;
         }
 
-        nav a:hover { background-color: var(--primary); color: white; }
+        nav a:hover { background-color: #eff6ff; border-color: var(--primary); }
+        
+        /* Clase para la pestaña activa */
+        nav a.active {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
 
         /* ==================== CONTENEDOR Y SECCIONES ==================== */
-        .container { max-width: 1200px; margin: 3rem auto; padding: 0 1.5rem; }
+        .container { max-width: 1200px; margin: 3rem auto; padding: 0 1.5rem; min-height: 60vh; }
 
         section {
             background: var(--bg-card);
@@ -77,6 +86,20 @@
             margin-bottom: 4rem;
             box-shadow: 0 10px 30px rgba(0,0,0,0.04);
             border-top: 6px solid var(--primary);
+            
+            /* Ocultar secciones por defecto para el sistema de pestañas */
+            display: none;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        /* Clase para mostrar la sección activa */
+        section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         h2 { font-size: 2.4rem; color: var(--primary); margin-bottom: 1.5rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; }
@@ -213,7 +236,7 @@
         }
 
         /* ==================== QUIZ INTERACTIVO ==================== */
-        .quiz-container { background: #1e293b; color: white; border-radius: 12px; padding: 3rem; margin-top: 3rem; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+        .quiz-container { background: #1e293b; color: white; border-radius: 12px; padding: 3rem; margin-top: 1rem; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
         .quiz-header { display: flex; justify-content: space-between; margin-bottom: 2rem; border-bottom: 1px solid #334155; padding-bottom: 1rem; font-size: 1.2rem; }
         .question-text { font-size: 1.5rem; margin-bottom: 2.5rem; font-weight: 500; line-height: 1.5; }
         .options { display: grid; grid-template-columns: 1fr; gap: 1rem; }
@@ -224,6 +247,18 @@
         .feedback { margin-top: 2rem; padding: 1.5rem; border-radius: 8px; display: none; font-size: 1.1rem; line-height: 1.6; }
         .next-btn { background: #3b82f6; color: white; border: none; padding: 1.2rem 2.5rem; font-size: 1.1rem; border-radius: 8px; cursor: pointer; margin-top: 2rem; display: none; font-weight: bold; width: 100%; text-transform: uppercase; letter-spacing: 1px; }
         .next-btn:hover { background: #2563eb; }
+
+        /* ==================== FOOTER ==================== */
+        footer {
+            background-color: var(--primary);
+            color: #cbd5e1;
+            text-align: center;
+            padding: 2.5rem 1rem;
+            margin-top: auto;
+            font-size: 1rem;
+            border-top: 4px solid var(--accent);
+        }
+        footer strong { color: white; }
     </style>
 </head>
 <body>
@@ -233,8 +268,8 @@
         <p>Cuaderno de Trabajo Integral | 1º Bachillerato | Lengua Castellana y Literatura</p>
     </header>
 
-    <nav>
-        <a href="#contexto">1. El Contexto</a>
+    <nav id="main-nav">
+        <a href="#contexto" class="active">1. El Contexto</a>
         <a href="#formalidad">2. Formalidad y Distancia</a>
         <a href="#intenciones">3. Pragmática e Intenciones</a>
         <a href="#noverbal">4. Comunicación No Verbal</a>
@@ -244,7 +279,7 @@
     <div class="container">
         
         <!-- ==================== SECCIÓN 1 ==================== -->
-        <section id="contexto">
+        <section id="contexto" class="active">
             <h2>1. El Contexto y los Componentes del Hecho Comunicativo</h2>
             
             <p>El esquema clásico de la comunicación (emisor, receptor, mensaje, código y canal) es muy útil para entender cómo funciona un telégrafo o un ordenador, pero se queda corto para los seres humanos. Las personas no somos máquinas que descodifican señales exactas. La comunicación humana es un proceso vivo de <strong>ostensión</strong> (yo realizo un acto para mostrarte que quiero comunicarte algo) e <strong>inferencia</strong> (tú deduces mi mensaje basándote en las pistas que te doy).</p>
@@ -447,7 +482,7 @@
                 <h4>Retos sobre las Máximas de Grice</h4>
                 <ol class="task-list">
                     <li><strong>Análisis del Diálogo H:</strong> Lee detenidamente la respuesta de Elena. ¿Qué máxima de Grice está violando descaradamente? Al responder hablando de platos y cortinas cuando le preguntan por la comida, ¿cuál es la "implicatura" que Carlos debe deducir sobre las dotes culinarias de Marta?</li>
-                    <li><strong>La Ironía Satírica:</strong> Cuando leemos un titular de <em>El Mundo Today</em> o revistas satíricas similares, nos reímos porque violan la máxima de Cualidad (dicen algo que es mentira) basándose en nuestro contexto sociohistórico. Inventa un titular de noticia falsa sobre tu instituto que viole la máxima de cualidad para hacer una crítica irónica (ej. sobre los exámenes, el frío en las aulas o la cafetería).</li>
+                    <li><strong>La Ironía Satírica:</strong> Cuando leemos un titular de revistas de humor satírico, nos reímos porque violan la máxima de Cualidad (dicen algo que es mentira) basándose en nuestro contexto sociohistórico. Inventa un titular de noticia falsa sobre tu instituto que viole la máxima de cualidad para hacer una crítica irónica (ej. sobre los exámenes, el frío en las aulas o la cafetería).</li>
                     <li><strong>Teatro del Absurdo (Actividad Creativa):</strong> En parejas, escribid un diálogo teatral breve (unas 15 líneas) representando una primera cita a ciegas. El objetivo es que los personajes violen sistemáticamente las máximas para que la cita sea un desastre:
                         <ul>
                             <li>El Personaje A viola la máxima de Cantidad (da detalles excesivos e innecesarios de su vida digestiva).</li>
@@ -513,21 +548,20 @@
                 <!-- 
                 ========================================================================
                 PROFE: AQUÍ ESTÁ EL HUECO PARA TUS VÍDEOS.
-                Tienes la etiqueta para un MP4 local o el iframe de YouTube.
                 ======================================================================== 
                 -->
-
                 <div class="video-container">
-                    <!-- Si tienes el vídeo descargado: -->
+                    <!-- Opción A: Vídeo local (ej: tu_video.mp4). Descomenta para usar. -->
+                    <!--
                     <video controls muted>
                         <source src="tu_video.mp4" type="video/mp4">
                         Tu navegador no soporta el formato de vídeo.
                     </video>
-                    
-                    <!-- Si usas YouTube, comenta la etiqueta <video> de arriba y descomenta el iframe de abajo: -->
-                    <!-- 
-                    <iframe src="https://www.youtube.com/embed/79i84xYelZI?mute=1" title="Reproductor de vídeo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     -->
+                    
+                    <!-- Opción B: YouTube iframe. Pon tu URL de YouTube en src="". -->
+                    <!-- El ejemplo actual es un marcador de posición de YouTube (Chaplin Mudo). -->
+                    <iframe src="https://www.youtube.com/embed/79i84xYelZI?mute=1" title="Reproductor de vídeo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
             <!-- FIN HUECO MULTIMEDIA -->
@@ -583,9 +617,41 @@
 
     </div>
 
-    <!-- ==================== JAVASCRIPT DEL SIMULADOR ==================== -->
+    <!-- ==================== FOOTER DERECHOS ==================== -->
+    <footer>
+        <p><strong>Departamento de Lengua Castellana y Literatura. IES San José de la Rinconada. 2026</strong></p>
+        <p style="font-size: 0.85rem; margin-top: 0.5rem; color: #94a3b8;">Material didáctico interactivo adaptado a los saberes básicos de 1º de Bachillerato de Lengua Castellana y Literatura (LOMLOE Andalucía).</p>
+    </footer>
+
+    <!-- ==================== JAVASCRIPT DEL SIMULADOR Y NAVEGACIÓN ==================== -->
     <script>
-        // Array masivo de preguntas teóricas y escenarios prácticos
+        // --- LÓGICA DE NAVEGACIÓN POR PESTAÑAS (SPA) ---
+        const navLinks = document.querySelectorAll('#main-nav a');
+        const sections = document.querySelectorAll('section');
+
+        function switchSection(targetId) {
+            // Ocultar todas las secciones y desactivar botones
+            sections.forEach(sec => sec.classList.remove('active'));
+            navLinks.forEach(link => link.classList.remove('active'));
+            
+            // Mostrar la sección objetivo y activar el botón
+            document.getElementById(targetId).classList.add('active');
+            document.querySelector(`#main-nav a[href="#${targetId}"]`).classList.add('active');
+            
+            // Subir el scroll automáticamente
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Evita el salto brusco del ancla HTML
+                const targetId = this.getAttribute('href').substring(1);
+                switchSection(targetId);
+            });
+        });
+
+
+        // --- LÓGICA DEL SIMULADOR (QUIZ) ---
         const quizData = [
             {
                 q: "Un político pierde estrepitosamente las elecciones. Al salir ante la prensa declara: 'Los resultados obtenidos hoy han sido manifiestamente mejorables'. Según la pragmática, ¿qué ocurre aquí?",
@@ -769,6 +835,7 @@
             }
         };
 
+        // Iniciar el quiz al cargar la página
         loadQ();
     </script>
 </body>
