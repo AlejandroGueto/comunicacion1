@@ -3,20 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloque B: Comunicación. Componentes del hecho comunicativo</title>
+    <title>Bloque B: Comunicación Integral. Componentes del hecho comunicativo</title>
     <style>
         /* ==================== VARIABLES Y RESET ==================== */
         :root {
             --primary: #1e3a8a; 
             --secondary: #b91c1c; 
             --accent: #059669; 
-            --bg-body: #f8fafc;
+            --bg-body: #f1f5f9;
             --bg-card: #ffffff;
-            --text-main: #334155;
-            --text-muted: #64748b;
-            --border-color: #e2e8f0;
-            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            --font-serif: 'Merriweather', Georgia, serif;
+            --text-main: #1e293b;
+            --font-sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            --font-serif: 'Georgia', serif;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -25,7 +23,7 @@
             font-family: var(--font-sans);
             background-color: var(--bg-body);
             color: var(--text-main);
-            line-height: 1.7;
+            line-height: 1.6;
             font-size: 16px;
         }
 
@@ -33,13 +31,13 @@
         header {
             background: linear-gradient(135deg, var(--primary), #3b82f6);
             color: white;
-            padding: 4rem 2rem;
+            padding: 3rem 2rem;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-bottom: 5px solid var(--accent);
         }
 
-        header h1 { font-size: 3rem; margin-bottom: 1rem; font-weight: 800; }
-        header p { font-size: 1.2rem; opacity: 0.9; max-width: 800px; margin: 0 auto; }
+        header h1 { font-size: 2.8rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.2rem; opacity: 0.9; }
 
         nav {
             background-color: white;
@@ -50,198 +48,128 @@
             justify-content: center;
             flex-wrap: wrap;
             padding: 1rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
         }
 
         nav a {
             color: var(--primary);
             text-decoration: none;
-            font-weight: 600;
+            font-weight: bold;
             padding: 0.5rem 1rem;
             margin: 0.2rem;
-            border-radius: 6px;
-            transition: all 0.2s;
+            border-radius: 4px;
+            transition: background 0.2s;
         }
 
-        nav a:hover { background-color: var(--primary); color: white; }
+        nav a:hover { background-color: #e2e8f0; }
 
         /* ==================== CONTENEDOR Y SECCIONES ==================== */
-        .container { max-width: 1200px; margin: 2rem auto; padding: 0 1.5rem; }
+        .container { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
 
         section {
             background: var(--bg-card);
             border-radius: 12px;
-            padding: 3rem;
+            padding: 2.5rem;
             margin-bottom: 3rem;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
-            border-top: 5px solid var(--primary);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
         }
 
-        h2 { font-size: 2.2rem; color: var(--primary); margin-bottom: 1.5rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; }
-        h3 { font-size: 1.5rem; color: var(--secondary); margin: 2rem 0 1rem 0; }
-        h4 { font-size: 1.2rem; color: var(--accent); margin: 1.5rem 0 0.5rem 0; }
+        h2 { color: var(--primary); font-size: 2rem; border-bottom: 3px solid var(--primary); padding-bottom: 0.5rem; margin-bottom: 2rem; }
+        h3 { color: var(--secondary); font-size: 1.5rem; margin: 2rem 0 1rem; padding-left: 10px; border-left: 5px solid var(--secondary); }
+        h4 { color: var(--primary); margin-bottom: 0.5rem; }
         
         p { margin-bottom: 1rem; }
         
-        /* ==================== CAJAS DE TEORÍA Y TEXTOS ==================== */
-        .etymology-box {
-            background-color: #f1f5f9;
-            border-left: 4px solid var(--primary);
-            padding: 1rem 1.5rem;
-            font-family: var(--font-serif);
-            font-style: italic;
-            margin: 1.5rem 0;
-            border-radius: 0 8px 8px 0;
-        }
-
-        .theory-highlight {
-            background-color: #ecfdf5;
-            border: 1px solid #a7f3d0;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 1.5rem 0;
-        }
-        
-        .text-analysis-box {
-            background-color: #fff;
+        /* ==================== CAJAS TEÓRICAS ==================== */
+        .theory-box {
+            background-color: #f8fafc;
             border: 1px solid #cbd5e1;
             padding: 1.5rem;
             border-radius: 8px;
-            margin: 1.5rem 0;
-            box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+            margin-bottom: 1.5rem;
         }
 
-        .blockquote-style {
+        .text-box {
+            background-color: #fff;
             border-left: 4px solid var(--accent);
-            padding-left: 1.5rem;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
             font-family: var(--font-serif);
-            color: #475569;
-            margin: 1rem 0;
-            background: #f8fafc;
-            padding: 1rem 1.5rem;
-            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
-        /* ==================== RETOS Y TAREAS (UI) ==================== */
-        .challenge-zone {
-            background: #fffbeb;
-            border: 2px dashed #fcd34d;
-            border-radius: 10px;
-            padding: 2rem;
-            margin: 2rem 0;
-        }
-
-        .challenge-zone h3 { color: #d97706; margin-top: 0; display: flex; align-items: center; gap: 10px;}
-
-        details {
-            background: white;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            overflow: hidden;
-        }
-
-        summary {
-            font-weight: bold;
-            padding: 1rem;
-            background-color: #f8fafc;
-            cursor: pointer;
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        summary::-webkit-details-marker { display: none; }
-        summary:after { content: "+"; font-size: 1.5rem; color: var(--primary); }
-        details[open] summary:after { content: "-"; }
-        
-        .details-content { padding: 1.5rem; border-top: 1px solid var(--border-color); background: white; }
-
-        .task-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .task-card {
-            background: white;
-            border: 1px solid var(--border-color);
+        /* ==================== CAJAS DE EJERCICIOS ==================== */
+        .exercise-box {
+            background-color: #fffbeb;
+            border: 2px dashed #f59e0b;
             border-radius: 8px;
             padding: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.2s, border-color 0.2s;
+            margin: 1.5rem 0 2.5rem 0;
         }
 
-        .task-card:hover { transform: translateY(-5px); border-color: var(--primary); }
-        .task-card h4 { color: var(--primary); margin-top: 0; }
+        .exercise-box h4 { color: #b45309; display: flex; align-items: center; gap: 8px; font-size: 1.2rem; border-bottom: 1px solid #fcd34d; padding-bottom: 0.5rem;}
+        
+        .task-list { list-style-type: decimal; margin-left: 1.5rem; margin-bottom: 1rem; }
+        .task-list li { margin-bottom: 0.8rem; }
+
+        /* ==================== MULTIMEDIA Y CONTENEDOR DE VÍDEO ==================== */
+        .multimedia-box {
+            background-color: #eff6ff;
+            border: 2px solid #60a5fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+
+        .multimedia-box strong { color: #1d4ed8; font-size: 1.1rem; }
+        
+        /* Clase especial para que los vídeos queden siempre proporcionados y bonitos */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporción 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            background-color: #000;
+        }
+        
+        .video-container iframe, .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
 
         /* ==================== QUIZ INTERACTIVO ==================== */
-        .quiz-container {
-            background: #1e293b;
-            color: white;
-            border-radius: 12px;
-            padding: 2.5rem;
-            margin-top: 3rem;
-            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
-        }
-        
-        .quiz-header { display: flex; justify-content: space-between; margin-bottom: 2rem; border-bottom: 1px solid #334155; padding-bottom: 1rem; }
-        .question-text { font-size: 1.4rem; margin-bottom: 2rem; font-weight: 500; }
-        
-        .options { display: grid; grid-template-columns: 1fr; gap: 1rem; }
-        .option-btn {
-            background: #334155;
-            color: white;
-            border: 2px solid #475569;
-            padding: 1rem 1.5rem;
-            border-radius: 8px;
-            font-size: 1rem;
-            cursor: pointer;
-            text-align: left;
-            transition: all 0.2s;
-        }
-        
-        .option-btn:hover:not(:disabled) { background: #475569; border-color: #94a3b8; }
+        .quiz-container { background: #1e293b; color: white; border-radius: 12px; padding: 2.5rem; margin-top: 2rem; }
+        .quiz-header { border-bottom: 1px solid #475569; padding-bottom: 1rem; margin-bottom: 2rem; font-weight: bold;}
+        .question-text { font-size: 1.3rem; margin-bottom: 1.5rem; }
+        .options { display: grid; gap: 1rem; }
+        .option-btn { background: #334155; color: white; border: 2px solid #475569; padding: 1rem; border-radius: 8px; cursor: pointer; text-align: left; font-size: 1rem; transition: background 0.2s; }
+        .option-btn:hover:not(:disabled) { background: #475569; }
         .option-btn.correct { background: #059669; border-color: #10b981; }
         .option-btn.wrong { background: #dc2626; border-color: #ef4444; }
-        
-        .feedback {
-            margin-top: 1.5rem; padding: 1.5rem; border-radius: 8px; display: none; font-size: 1.1rem;
-        }
-        
-        .next-btn {
-            background: #3b82f6; color: white; border: none; padding: 1rem 2rem; font-size: 1.1rem;
-            border-radius: 8px; cursor: pointer; margin-top: 1.5rem; display: none; font-weight: bold;
-        }
-        .next-btn:hover { background: #2563eb; }
-
-        /* ==================== RESPONSIVE ==================== */
-        @media (max-width: 768px) {
-            header { padding: 3rem 1rem; }
-            header h1 { font-size: 2rem; }
-            section { padding: 1.5rem; }
-            .text-comparison { flex-direction: column; }
-        }
-        
-        .text-comparison { display: flex; gap: 1.5rem; margin-top: 1.5rem; }
-        .text-comparison > div { flex: 1; padding: 1.5rem; border-radius: 8px; }
+        .feedback { margin-top: 1.5rem; padding: 1rem; border-radius: 8px; display: none; }
+        .next-btn { background: #3b82f6; color: white; border: none; padding: 1rem 2rem; border-radius: 8px; cursor: pointer; margin-top: 1.5rem; display: none; font-weight: bold; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>La Comunicación Humana: Más Allá del Código</h1>
-        <p>Cuaderno Interactivo de Trabajo | Saberes Básicos LOMLOE | 1º Bachillerato</p>
+        <h1>La Comunicación Humana</h1>
+        <p>Cuaderno de Trabajo | 1º Bachillerato | Lengua Castellana y Literatura</p>
     </header>
 
     <nav>
-        <a href="#contexto">1. Contexto y Deixis</a>
-        <a href="#formalidad">2. Formalidad y Distancia</a>
-        <a href="#intenciones">3. Actos de Habla e Intenciones</a>
-        <a href="#noverbal">4. Comunicación No Verbal</a>
-        <a href="#quiz">5. Laboratorio Pragmático</a>
+        <a href="#contexto">1. Contexto</a>
+        <a href="#formalidad">2. Formalidad</a>
+        <a href="#intenciones">3. Intenciones</a>
+        <a href="#noverbal">4. No Verbal</a>
+        <a href="#quiz">5. Simulador</a>
     </nav>
 
     <div class="container">
@@ -249,491 +177,410 @@
         <!-- ==================== SECCIÓN 1 ==================== -->
         <section id="contexto">
             <h2>1. El Contexto y los Componentes del Hecho Comunicativo</h2>
-            
-            <div class="etymology-box">
-                <strong>La raíz de la palabra:</strong> "Texto" y "Contexto" provienen del latín <em>textus</em> y <em>contexere</em>, que significan "tejido" y "tejer juntos". Las palabras no flotan en el vacío; forman una urdimbre con la realidad que las rodea. Sin el marco que las entrelaza, el significado se deshilacha.
+            <p>La comunicación no es una máquina de enviar datos. Es un proceso de <strong>ostensión</strong> (yo te muestro que quiero comunicarte algo) e <strong>inferencia</strong> (tú deduces mi mensaje basándote en pistas). Para que esto funcione, dependemos totalmente del contexto.</p>
+
+            <!-- SUBAPARTADO 1.1 -->
+            <h3>1.1. El Contexto Situacional (La Deixis)</h3>
+            <div class="theory-box">
+                <p>Es el entorno físico, el lugar y el momento exacto en el que se produce la comunicación. Aquí operan los <strong>deícticos</strong> (del griego <em>deixis</em>, 'señalar').</p>
+                <p>Palabras como <em>yo, tú, aquí, allí, hoy, mañana, esto, aquello</em> son "cajas vacías". No significan nada por sí solas. Su significado se llena dependiendo de <strong>quién</strong> las pronuncia y <strong>dónde/cuándo</strong> lo hace.</p>
             </div>
 
-            <p>El esquema de comunicación tradicional es insuficiente. La comunicación humana se basa en la <strong>ostensión</strong> (mostrar la intención de comunicar) y la <strong>inferencia</strong> (deducir lo que el otro quiere decir). Para que la inferencia funcione, necesitamos el contexto.</p>
+            <div class="text-box">
+                <strong>Texto A:</strong><br>
+                "Ayer estuve esperándote aquí, pero me dijeron que tú ya te habías ido con ella. Tráeme eso mañana sin falta o lo perderemos todo."
+            </div>
 
-            <div class="theory-highlight">
-                <h3>Dimensiones del Contexto</h3>
-                <ul>
-                    <li><strong>1. Contexto Situacional (Espaciotemporal):</strong> Es el entorno físico inmediato. Aquí operan los <em>deícticos</em> (del griego <em>deixis</em>, 'señalar'). Palabras como "yo", "tú", "aquí", "mañana", "esto" carecen de significado léxico pleno; su sentido depende enteramente de quién habla y dónde está.</li>
-                    <li><strong>2. Contexto Lingüístico (Cotexto):</strong> Son las palabras que rodean a un término. Resuelve la polisemia y la homonimia.</li>
-                    <li><strong>3. Contexto Sociohistórico (Enciclopedia Cognitiva):</strong> El bagaje cultural y los conocimientos compartidos. Las presuposiciones, la ironía, las referencias históricas o los tabúes culturales dependen de esto.</li>
+            <div class="exercise-box">
+                <h4>✍️ Ejercicios: Análisis de Deícticos</h4>
+                <ul class="task-list">
+                    <li>Copia el "Texto A" en tu cuaderno y subraya todas las palabras deícticas (pronombres, adverbios de tiempo y lugar, demostrativos).</li>
+                    <li>Imagina que encuentras el Texto A escrito en un papel en el suelo de la calle. ¿Por qué es imposible comprender el mensaje? ¿Qué información exacta te falta?</li>
+                    <li><strong>Reto de reescritura:</strong> Reescribe el Texto A eliminando TODOS los deícticos. Tienes que sustituirlos por nombres propios, fechas concretas del calendario (ej. 15 de octubre) y lugares exactos (ej. la puerta del instituto).</li>
                 </ul>
             </div>
 
-            <div class="text-analysis-box">
-                <h4>🔍 Texto de Análisis: Los Deícticos en acción</h4>
-                <p>Lee detenidamente el siguiente fragmento anónimo:</p>
-                <div class="blockquote-style">
-                    "Ayer vine aquí buscándote, pero me dijeron que tú ya te habías ido. Eso no me gustó nada. Mañana volveremos a intentarlo en este mismo lugar, trae contigo aquello de lo que hablamos."
-                </div>
-                <p><strong>Reflexión:</strong> Extrae todas las palabras cuyo significado real dependa de saber en qué momento exacto del calendario se dijo la frase, el lugar geográfico donde estaban pisando y la identidad de los interlocutores.</p>
+            <!-- SUBAPARTADO 1.2 -->
+            <h3>1.2. El Contexto Cotextual y Sociohistórico</h3>
+            <div class="theory-box">
+                <ul>
+                    <li><strong>Contexto Lingüístico (Cotexto):</strong> Son las palabras que rodean a un término y nos ayudan a resolver palabras polisémicas (con varios significados).</li>
+                    <li><strong>Contexto Sociohistórico (Enciclopedia Cognitiva):</strong> Todo el conocimiento cultural, histórico y social que comparten los hablantes. Incluye las tradiciones, las modas, los hechos históricos y las frases hechas.</li>
+                </ul>
             </div>
 
-            <!-- ZONA DE RETOS: CONTEXTO -->
-            <div class="challenge-zone">
-                <h3>🛠️ Taller Práctico: Contexto e Inferencia</h3>
-                <p>Resolved los siguientes retos trabajando en parejas o pequeños grupos.</p>
-                
-                <details>
-                    <summary>Reto 1.1: El mensaje secuestrado</summary>
-                    <div class="details-content">
-                        <p><strong>Situación:</strong> Entras al aula y encuentras escrito en la pizarra lo siguiente:</p>
-                        <div class="blockquote-style" style="text-align: center; font-size: 1.2rem; font-weight: bold;">
-                            "Ayer os dije que trajerais eso aquí, pero como él no lo hizo, lo haremos mañana."
-                        </div>
-                        <p><strong>Misión:</strong> Identificad todos los elementos deícticos. Elaborad una lista y explicad por qué este mensaje es un fracaso comunicativo absoluto para vosotros si habéis faltado a las dos últimas clases.</p>
-                    </div>
-                </details>
+            <div class="text-box">
+                <strong>Texto B:</strong> "El banco está en las últimas."<br>
+                <strong>Texto C:</strong> "Este finde nos hacemos un bizum y nos pillamos unas zapas to guapas porque es de chill."<br>
+                <strong>Texto D:</strong> "A buenas horas mangas verdes."
+            </div>
 
-                <details>
-                    <summary>Reto 1.2: Choque Sociohistórico</summary>
-                    <div class="details-content">
-                        <p><strong>Situación:</strong> Leemos el siguiente titular real de la prensa española de los años 80:</p>
-                        <div class="blockquote-style" style="text-align: center; font-size: 1.2rem; font-weight: bold; background: #e2e8f0;">
-                            "La movida madrileña toma las calles."
-                        </div>
-                        <p>Un programa de traducción automática (sin contexto cultural) traduce "movida" como "desplazamiento físico" y "toma" como "bebe".</p>
-                        <p><strong>Misión:</strong> Explicad qué tipo de contexto falla aquí y redactad un párrafo explicando a un estudiante extranjero qué conocimientos previos (enciclopedia cognitiva) necesita para entender este titular correctamente.</p>
-                    </div>
-                </details>
-
-                <div class="task-grid">
-                    <div class="task-card">
-                        <h4>📝 Creación: El Mensaje Cifrado</h4>
-                        <p>Escribe en tu cuaderno un diálogo de 6-8 líneas lleno de pronombres y adverbios deícticos (sin usar nombres propios, lugares geográficos concretos ni sustantivos específicos). Intercámbialo con un compañero para que intente "reconstruir" el contexto situacional inventándose la escena.</p>
-                    </div>
-                    <div class="task-card">
-                        <h4>📝 Investigación: El Contexto del Meme</h4>
-                        <p>Busca en tu móvil un meme de actualidad. Redacta un texto expositivo de unas 100 palabras explicando al detalle todo el <em>contexto sociohistórico</em> que debe tener el receptor para entender el chiste. Sin ese contexto, ¿qué significa literalmente la imagen?</p>
-                    </div>
-                </div>
+            <div class="exercise-box">
+                <h4>✍️ Ejercicios: Cotexto y Enciclopedia</h4>
+                <ul class="task-list">
+                    <li>Fíjate en el <strong>Texto B</strong>. Añade tú mismo un <em>cotexto</em> (una o dos frases más alrededor) para que "banco" signifique una entidad financiera. Luego, inventa otro cotexto distinto para que "banco" signifique un asiento de madera en un parque.</li>
+                    <li>Imagina que un profesor de Lengua del año 1950 viaja en el tiempo y lee el <strong>Texto C</strong>. Explica en tu cuaderno detalladamente qué conocimientos de la sociedad de hoy le faltan (su <em>contexto sociohistórico</em>) para poder entender palabras como "bizum", "zapas" o la expresión "es de chill".</li>
+                    <li>El <strong>Texto D</strong> es una frase hecha. Investiga o deduce cuál es su origen histórico y qué significa en la actualidad. ¿Qué pasa si alguien que está aprendiendo español traduce la frase palabra por palabra?</li>
+                </ul>
             </div>
         </section>
 
         <!-- ==================== SECCIÓN 2 ==================== -->
         <section id="formalidad">
-            <h2>2. Grado de Formalidad, Distancia Social y Ámbito</h2>
+            <h2>2. Formalidad, Distancia Social y Ámbito</h2>
             
-            <p>La <strong>adecuación</strong> textual nos obliga a elegir un registro lingüístico apropiado. Esta elección no es libre, está coaccionada por la red de relaciones sociales entre los interlocutores.</p>
-
-            <div class="theory-highlight">
-                <h3>Los Ejes de la Relación Social</h3>
+            <!-- SUBAPARTADO 2.1 -->
+            <h3>2.1. Los Ejes de Relación (Poder vs. Solidaridad)</h3>
+            <div class="theory-box">
+                <p>Nuestra forma de hablar cambia drásticamente según con quién hablemos. Esto se mide en dos ejes sociolingüísticos:</p>
                 <ul>
-                    <li><strong>Eje Vertical (Poder / Jerarquía):</strong> Relaciones asimétricas. Médico-paciente, tribunal-acusado, examinador-alumno. A mayor asimetría, mayor necesidad de un registro formal, fórmulas de tratamiento y cortesía negativa (no imponerse).</li>
-                    <li><strong>Eje Horizontal (Solidaridad / Familiaridad):</strong> Relaciones simétricas. Amigos, hermanos, compañeros. Permite el registro coloquial, el tuteo, la economía del lenguaje y el léxico expresivo.</li>
+                    <li><strong>Eje Vertical (Asimetría / Poder):</strong> Hay una diferencia de estatus o autoridad (médico/paciente, policía/ciudadano, profesor/alumno). Exige registro formal, fórmulas de cortesía (usted) y evitar palabras malsonantes.</li>
+                    <li><strong>Eje Horizontal (Simetría / Solidaridad):</strong> Los hablantes están al mismo nivel (amigos, hermanos). Se usa registro coloquial, tuteo, frases inacabadas y lenguaje expresivo.</li>
                 </ul>
-                
-                <h3>Público vs. Privado: La "Extimidad"</h3>
-                <p>Hoy, las redes sociales generan <strong>extimidad</strong> (hacer público lo íntimo). Un vídeo puede usar un registro de solidaridad extrema pero tener una audiencia masiva y pública, generando fricciones si el receptor real no es el receptor ideal esperado.</p>
             </div>
 
-            <div class="text-analysis-box">
-                <h4>🔍 Análisis Comparativo: El mismo mensaje, dos mundos</h4>
-                <p>Lee estos dos textos que comunican exactamente la misma realidad objetiva:</p>
-                <div class="text-comparison">
-                    <div style="background:#f1f5f9; border-left: 4px solid var(--primary);">
-                        <strong>Texto A (Correo electrónico institucional):</strong><br><br>
-                        "Estimado profesorado:<br>Por la presente, se insta a que procedan al desalojo de las instalaciones docentes con la mayor celeridad posible debido a incidencias de carácter técnico en el suministro eléctrico de la zona central del edificio. Rogamos disculpen las molestias. Un cordial saludo."
-                    </div>
-                    <div style="background:#dcf8c6; border-left: 4px solid #25D366;">
-                        <strong>Texto B (Grupo de WhatsApp de 1º Bachillerato):</strong><br><br>
-                        "illo salid ya del insti q se ha ido la luz otra vez en el bloque principal y nos echan rapidito 🏃‍♂️💨 nos vemos en el parque!!!!"
-                    </div>
-                </div>
-                <p style="margin-top: 1rem;"><strong>Reflexión:</strong> Señala las fórmulas de tratamiento, el tipo de léxico (cultismos vs. vulgarismos/coloquialismos) y los recursos tipográficos que marcan la diferencia de registro.</p>
+            <div class="text-box">
+                <strong>Texto E (Carta):</strong><br>
+                "Estimado Sr. Director: Por medio de la presente, le comunico mi decisión irrevocable de abandonar mi puesto en la empresa por motivos estrictamente personales. Le ruego tramite mi finiquito con la mayor brevedad."<br><br>
+                <strong>Texto F (WhatsApp):</strong><br>
+                "illo, q me rayao y lo dejamos, no me escribas más q voy a bloquearte, paso de movidas."
             </div>
 
-            <!-- ZONA DE RETOS: FORMALIDAD -->
-            <div class="challenge-zone">
-                <h3>🛠️ Taller Práctico: El Camaleón Lingüístico</h3>
-                
-                <details>
-                    <summary>Reto 2.1: El termómetro del "Tú" y el "Usted"</summary>
-                    <div class="details-content">
-                        <p><strong>Debate en asamblea:</strong> Elaborad una lista en la pizarra de situaciones exactas en las que usaríais el "usted" hoy en día. ¿Depende exclusivamente de la edad? ¿Del cargo? ¿Qué ocurre si tratas de usted a alguien de 30 años en un bar de tu barrio? ¿Cómo varía este uso según la zona de Andalucía u otras partes de España?</p>
-                    </div>
-                </details>
+            <div class="exercise-box">
+                <h4>✍️ Ejercicios: Adaptación al Eje Social</h4>
+                <ul class="task-list">
+                    <li>Identifica en qué eje (vertical u horizontal) se enmarcan el <strong>Texto E</strong> y el <strong>Texto F</strong> y justifica tu respuesta indicando qué elementos del lenguaje te han dado la pista.</li>
+                    <li><strong>Laboratorio de Traducción:</strong> Haz un cruce de registros. Reescribe el Texto E (renuncia laboral) como si fuera un WhatsApp enviado a un amigo que también trabaja en la empresa. Luego, reescribe el Texto F (ruptura amorosa) como si fuera una carta formal, culta y burocrática enviada por correo postal certificado.</li>
+                    <li><strong>Debate en clase:</strong> Escribe en tu cuaderno 3 situaciones de tu vida cotidiana donde usarías el trato de "usted" a día de hoy. Compáralas con las de tus compañeros.</li>
+                </ul>
+            </div>
 
-                <details>
-                    <summary>Reto 2.2: Traducción de Registros (Role-play)</summary>
-                    <div class="details-content">
-                        <p><strong>Situación base:</strong> Has roto accidentalmente el proyector digital del aula al tropezar con el cable.</p>
-                        <p><strong>Dinámica de actuación:</strong> 
-                            <br>1. <em>Pareja A:</em> Dramatizad la explicación del suceso a vuestro mejor amigo en el recreo (máxima solidaridad, registro coloquial).
-                            <br>2. <em>Pareja B:</em> Dramatizad la explicación del mismo suceso a la Dirección del centro en su despacho oficial (asimetría de poder, registro formal).
-                        </p>
-                        <p>El resto de la clase debe tomar nota de los cambios léxicos, sintácticos y proxémicos que realizan los actores.</p>
-                    </div>
-                </details>
+            <!-- SUBAPARTADO 2.2 -->
+            <h3>2.2. Ámbito Público, Privado y la "Extimidad"</h3>
+            <div class="theory-box">
+                <p>Antes, si escribías una carta, era un ámbito <strong>privado</strong>. Si hablabas en la radio, era <strong>público</strong>. Hoy, con internet, ha nacido la <strong>extimidad</strong>: hacer público (para miles de personas) algo que por su registro y temática debería ser privado (como grabar un vídeo llorando en tu habitación y subirlo a TikTok).</p>
+            </div>
 
-                <div class="task-grid">
-                    <div class="task-card">
-                        <h4>📝 Producción: La Instancia Inadecuada</h4>
-                        <p>Busca o redacta un texto altamente formal (por ejemplo, el reglamento del centro sobre puntualidad). Transfórmalo completamente en un guion para un vídeo de TikTok o un hilo de "X", dirigido a tus compañeros de clase, utilizando la jerga actual, emoticonos y apelando a la extimidad.</p>
-                    </div>
-                </div>
+            <div class="exercise-box">
+                <h4>✍️ Ejercicios: La Frontera Digital</h4>
+                <ul class="task-list">
+                    <li>Piensa en las "historias" de Instagram o estados de WhatsApp. Escribe un párrafo analizando por qué, a veces, publicamos mensajes que parecen dirigidos a una sola persona ("tú ya sabes quién eres"), pero obligamos a todos nuestros contactos a leerlo. ¿Es comunicación pública o privada?</li>
+                    <li>Imagina que el director del instituto lee el chat privado de WhatsApp de tu clase. ¿Qué fallos de "adecuación" encontraría? Escribe un listado de 5 cosas habituales en esos chats que serían inaceptables en un examen.</li>
+                </ul>
             </div>
         </section>
 
         <!-- ==================== SECCIÓN 3 ==================== -->
         <section id="intenciones">
-            <h2>3. Propósitos Comunicativos e Interpretación de Intenciones</h2>
+            <h2>3. Propósitos Comunicativos (Pragmática)</h2>
             
-            <p>La <strong>Pragmática</strong> es la disciplina que estudia el lenguaje en uso. Las palabras no solo describen el mundo, lo transforman (hablar es actuar).</p>
-
-            <div class="theory-highlight">
-                <h3>Teoría de los Actos de Habla</h3>
-                <p>Todo enunciado realiza tres actos simultáneos:</p>
+            <!-- SUBAPARTADO 3.1 -->
+            <h3>3.1. Teoría de los Actos de Habla</h3>
+            <div class="theory-box">
+                <p>Hablar es actuar. Cuando decimos algo, hacemos tres cosas a la vez:</p>
                 <ol>
-                    <li><strong>Acto Locutivo:</strong> La simple emisión física de sonidos con significado.</li>
-                    <li><strong>Acto Ilocutivo:</strong> La <em>intención</em> real del emisor (prometer, amenazar, ordenar).</li>
-                    <li><strong>Acto Perlocutivo:</strong> El <em>efecto</em> real producido en el receptor.</li>
+                    <li><strong>Acto Locutivo:</strong> Pronunciar las palabras correctamente (ej. decir "Hace frío").</li>
+                    <li><strong>Acto Ilocutivo:</strong> La INTENCIÓN (ej. mi intención no es dar el parte meteorológico, sino pedirte que cierres la ventana).</li>
+                    <li><strong>Acto Perlocutivo:</strong> El EFECTO (ej. tú te levantas y cierras la ventana).</li>
                 </ol>
-                <p><strong>Actos Directos vs. Indirectos:</strong> Si digo "Abre la ventana", es directo. Si digo "Uy, qué ambiente más cargado hay aquí", mi intención (acto ilocutivo) sigue siendo que abras la ventana, pero lo formulo como un acto indirecto para ser más cortés.</p>
+                <p>Los actos ilocutivos pueden ser <strong>directos</strong> ("Cierra la ventana") o <strong>indirectos</strong> ("Qué frío hace", donde tienes que deducir la orden).</p>
+            </div>
 
-                <h3 style="margin-top: 1.5rem;">El Principio de Cooperación (Paul Grice)</h3>
-                <p>Para comunicarnos, asumimos que el otro coopera cumpliendo estas cuatro máximas:</p>
-                <ul>
-                    <li><strong>Cantidad:</strong> Da la información justa y necesaria.</li>
-                    <li><strong>Cualidad:</strong> Di la verdad, no digas nada sin pruebas.</li>
-                    <li><strong>Relación:</strong> Sé pertinente, no cambies de tema.</li>
-                    <li><strong>Modo:</strong> Sé claro y ordenado.</li>
+            <div class="exercise-box">
+                <h4>✍️ Ejercicios: Detectives de Intenciones</h4>
+                <ul class="task-list">
+                    <li>Copia las siguientes frases e indica cuál es el <strong>acto ilocutivo indirecto</strong> (la intención real y oculta) de cada una:
+                        <ul>
+                            <li>A tu hermano pequeño que está cantando a gritos: <em>"¿No te duele la garganta?"</em></li>
+                            <li>A tu padre, mirando un escaparate: <em>"Qué zapatillas más chulas, y justo se me han roto las mías."</em></li>
+                            <li>Un profesor al entrar a clase: <em>"Me parece que la puerta se ha quedado abierta."</em></li>
+                        </ul>
+                    </li>
+                    <li>Redacta 3 ejemplos propios de actos ilocutivos indirectos que hayas usado esta misma semana.</li>
                 </ul>
             </div>
 
-            <div class="text-analysis-box">
-                <h4>🔍 Análisis Textual: Implicaturas y Máximas Rotas</h4>
-                <p>Lee el siguiente diálogo cotidiano entre dos compañeros de piso:</p>
-                <div class="blockquote-style">
-                    — <strong>Carlos:</strong> ¿Qué te pareció la cena que nos preparó Marta anoche?<br>
-                    — <strong>Elena:</strong> Bueno... los platos que sacó eran preciosos, ¿verdad? Y el mantel hacía juego con las cortinas.
-                </div>
-                <p><strong>Reflexión:</strong> Fíjate en la respuesta de Elena. ¿Qué máxima de Grice está violando descaradamente? Al violar esta norma de forma tan obvia, ¿qué "implicatura" (mensaje oculto que Carlos debe inferir) está transmitiendo realmente sobre la comida de Marta?</p>
+            <!-- SUBAPARTADO 3.2 -->
+            <h3>3.2. El Principio de Cooperación (Grice)</h3>
+            <div class="theory-box">
+                <p>El filósofo Paul Grice dijo que para comunicarnos bien, debemos respetar cuatro máximas:</p>
+                <ul>
+                    <li><strong>Cantidad:</strong> Di lo justo, ni mucho ni poco.</li>
+                    <li><strong>Cualidad:</strong> Di la verdad, no mientas.</li>
+                    <li><strong>Relación:</strong> No cambies de tema absurdamente.</li>
+                    <li><strong>Modo:</strong> Sé claro, no seas rebuscado o ambiguo.</li>
+                </ul>
+                <p>¡Atención! Cuando rompemos una máxima A PROPÓSITO para que el otro se dé cuenta, creamos una <strong>implicatura</strong> (como la ironía).</p>
             </div>
 
-            <!-- ZONA DE RETOS: INTENCIONES -->
-            <div class="challenge-zone">
-                <h3>🛠️ Taller Práctico: Detectives Pragmáticos</h3>
-                
-                <details>
-                    <summary>Reto 3.1: Catálogo de Actos Indirectos</summary>
-                    <div class="details-content">
-                        <p><strong>Análisis:</strong> Debatid cuál es el verdadero <em>acto ilocutivo</em> (la intención profunda) detrás de cada uno de estos enunciados pronunciados en contextos específicos:</p>
-                        <ol>
-                            <li>(En medio de la cena familiar) <em>"¿Alguien sabe si queda agua fresca en la nevera?"</em></li>
-                            <li>(Una madre a su hijo que llega de madrugada) <em>"Bonitas horas de llegar a casa."</em></li>
-                            <li>(Un profesor mirando al fondo de una clase ruidosa) <em>"Me parece que mi explicación está interrumpiendo vuestra charla."</em></li>
-                            <li>(En una tienda, mirando un jersey sin etiqueta) <em>"¿A cómo están estos?"</em></li>
-                        </ol>
-                    </div>
-                </details>
+            <div class="text-box">
+                <strong>Diálogo G:</strong><br>
+                — Madre: ¿Has recogido tu cuarto como te pedí?<br>
+                — Hijo: He bajado a comprar el pan y he sacado al perro.
+            </div>
 
-                <div class="task-grid">
-                    <div class="task-card">
-                        <h4>📝 Búsqueda: La Ironía Satírica</h4>
-                        <p>Navegad por internet y buscad en revistas de humor satírico (como El Mundo Today o El Jueves) tres titulares de noticias ficticias. Analizad por escrito cómo el periodista transgrede intencionadamente la máxima de Cualidad (decir la verdad) para construir el humor, y qué conocimientos necesita el lector para no tomarse la noticia en serio.</p>
-                    </div>
-                    <div class="task-card">
-                        <h4>📝 Teatro: El Colapso de Grice</h4>
-                        <p>Escribid por parejas un diálogo teatral breve (aprox. 15 líneas) donde los personajes violen sistemáticamente todas las máximas de Grice: cambian de tema sin sentido (Relación), dan detalles excesivos e inútiles (Cantidad), mienten absurdamente (Cualidad) y son confusos (Modo). Leedlo en alto frente a la clase.</p>
-                    </div>
-                </div>
+            <div class="exercise-box">
+                <h4>✍️ Ejercicios: Rompiendo las Reglas</h4>
+                <ul class="task-list">
+                    <li>Analiza el <strong>Diálogo G</strong>. ¿Qué máxima de Grice está violando descaradamente el hijo? ¿Cuál es la "implicatura" (lo que la madre deduce inmediatamente)?</li>
+                    <li><strong>Creación literaria: Teatro del absurdo.</strong> Escribe un breve diálogo teatral (10-15 líneas) entre dos personas que tienen una primera cita. En el diálogo, los personajes deben violar constantemente las máximas: uno miente descaradamente todo el rato (Cualidad), el otro da detalles aburridísimos de su digestión (Cantidad), responden cambiando de tema (Relación) o hablan en acertijos (Modo).</li>
+                </ul>
             </div>
         </section>
 
         <!-- ==================== SECCIÓN 4 ==================== -->
         <section id="noverbal">
-            <h2>4. El Canal Multimodal y los Elementos No Verbales</h2>
-            
-            <p>Se calcula que más del 60% de la información en una interacción cara a cara se transmite sin usar palabras. La comunicación es profundamente multimodal.</p>
+            <h2>4. Elementos No Verbales (Multimodalidad)</h2>
+            <p>Más de la mitad de la información que transmitimos no está en las palabras, sino en nuestro cuerpo y nuestra voz.</p>
 
-            <div class="theory-highlight">
-                <h3>Los Tres Pilares de lo No Verbal</h3>
-                
-                <h4>1. Paralingüística (El sonido no verbal)</h4>
-                <p>Tono de voz, volumen, velocidad, pausas, silencios funcionales, suspiros, risas. Modifican radicalmente el sentido literal de la palabra.</p>
-                
-                <h4>2. Cinésica (El movimiento corporal)</h4>
-                <ul>
-                    <li><em>Emblemas:</em> Gestos con traducción literal (levantar el pulgar, gesto de silencio).</li>
-                    <li><em>Ilustradores:</em> Gestos que dibujan lo que hablamos (marcar un tamaño con las manos).</li>
-                    <li><em>Reguladores:</em> Gestos para dar el turno de palabra (asentir con la cabeza).</li>
-                    <li><em>Adaptadores:</em> Gestos inconscientes para liberar estrés (tocarse el cuello, morder un bolígrafo).</li>
-                </ul>
-                
-                <h4>3. Proxémica (El espacio físico)</h4>
-                <p>El uso del espacio vital. Distancias: íntima (0-45 cm), personal (45-120 cm), social (1,2-3 m) y pública (>3 m). Invadir la zona incorrecta genera fuerte tensión comunicativa.</p>
+            <!-- SUBAPARTADO 4.1 -->
+            <h3>4.1. Paralingüística (La Voz)</h3>
+            <div class="theory-box">
+                <p>Es todo lo que acompaña al sonido pero no son palabras: el tono de voz, el volumen, la velocidad, los silencios, los suspiros o las risas. Un mismo mensaje cambia radicalmente según la paralingüística.</p>
             </div>
 
-            <!-- ZONA DE RETOS: NO VERBAL -->
-            <div class="challenge-zone">
-                <h3>🛠️ Taller Práctico: El Cuerpo Habla</h3>
+            <div class="exercise-box">
+                <h4>✍️ Ejercicios: Control de Voz</h4>
+                <ul class="task-list">
+                    <li><strong>Dramatización en el sitio:</strong> Elige la frase "Ya te he dicho que voy". Léela en voz alta a tu compañero de mesa aplicando estas variaciones paralingüísticas (tu compañero debe adivinar cuál haces):
+                        <br>a) Volumen bajo, velocidad rápida (miedo/prisa).
+                        <br>b) Volumen alto, pausas largas entre palabras (ira/amenaza).
+                        <br>c) Tono canturreante y suspiro al final (enamoramiento/despiste).
+                        <br>d) Tono plano y bostezo (aburrimiento).
+                    </li>
+                </ul>
+            </div>
+
+            <!-- SUBAPARTADO 4.2 -->
+            <h3>4.2. Cinésica (El Cuerpo)</h3>
+            <div class="theory-box">
+                <p>Es el lenguaje corporal. Los gestos pueden ser <strong>emblemas</strong> (sustituyen palabras, como levantar el pulgar), <strong>ilustradores</strong> (acompañan a la palabra, como marcar un tamaño con las manos), <strong>reguladores</strong> (asentir para que el otro siga hablando) o <strong>adaptadores</strong> (rascarse o morder un boli por nerviosismo).</p>
+            </div>
+
+            <!-- INICIO HUECO MULTIMEDIA (PARA EL PROFESOR) -->
+            <div class="multimedia-box">
+                <strong>🎬 CINE FÓRUM EN EL AULA: Análisis Cinésico</strong><br>
+                <p style="font-size: 0.9rem; color: #475569;"><em>Observa atentamente el siguiente fragmento audiovisual (sin sonido) para realizar la actividad.</em></p>
                 
-                <details>
-                    <summary>Reto 4.1: Cinésica Muda (Juego de roles)</summary>
-                    <div class="details-content">
-                        <p><strong>Dinámica:</strong> Cread tarjetas de papel con diferentes intenciones pragmáticas secretas (ej. "Pedir perdón tras una traición", "Vender desesperadamente un objeto inútil", "Mostrar superioridad ante un novato", "Consolar por compromiso"). Un voluntario saca una tarjeta y debe interactuar con un compañero <strong>SIN EMITIR NINGÚN SONIDO</strong>, solo usando su postura corporal, gestos (cinésica) y manejo del espacio (proxémica). La clase debe adivinar qué decía la tarjeta.</p>
-                    </div>
-                </details>
+                <!-- 
+                ========================================================================
+                PROFE: AQUÍ ESTÁ EL HUECO PARA TUS VÍDEOS.
+                Tienes dos opciones preparadas. Borra (o comenta) la que NO vayas a usar.
+                ======================================================================== 
+                -->
 
-                <div class="task-grid" style="grid-template-columns: 1fr;">
-                    <div class="task-card">
-                        <h4>🎬 Reto Multimedia: Doblaje Paralingüístico</h4>
-                        <p>Reproducid esta escena clásica del cine. <strong>Bajad el volumen a cero.</strong> Por parejas, debéis inventar y superponer un diálogo en directo a la escena, pero con un giro: cambiad por completo la intención original de la escena modulando vuestro tono, pausas, carraspeos y velocidad (paralingüística). Por ejemplo: convertid lo que parece una situación cómica o neutral en una escena de máxima tensión, misterio o tristeza profunda solo con el uso de vuestra voz.</p>
-                        
-                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-top: 1.5rem; border-radius: 8px; border: 2px solid var(--border-color); background: #000;">
-                            <!-- Marcador de posición estándar de YouTube embebido. Una escena clásica del dominio público de Chaplin ideal para análisis cinésico -->
-                            <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/qNseEVlaCl4?mute=1" title="Cine Mudo - Análisis Cinésico" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
+                <!-- OPCIÓN A: VÍDEO LOCAL (Si tienes un archivo .mp4 descargado en la misma carpeta) -->
+                <!-- Cambia 'tu_video.mp4' por el nombre de tu archivo. -->
+                <div class="video-container">
+                    <video controls muted>
+                        <source src="tu_video.mp4" type="video/mp4">
+                        Tu navegador no soporta el formato de vídeo.
+                    </video>
                 </div>
 
-                <div class="task-grid">
-                    <div class="task-card">
-                        <h4>📝 Proyecto de Observación: Etnografía de Cafetería</h4>
-                        <p><strong>Trabajo de campo:</strong> Durante el recreo o en una cafetería, busca a dos o más personas interactuando. Siéntate a una distancia donde puedas verlos claramente pero <em>no escuches</em> el contenido de su conversación. Observa durante 10 minutos. Redacta un informe pericial detallando exclusivamente qué elementos cinésicos y proxémicos intervienen. Concluye deduciendo: ¿qué tipo de relación social tienen (jerárquica o solidaria)? ¿Cuál parece ser el tono emocional del encuentro?</p>
-                    </div>
+                <!-- OPCIÓN B: VÍDEO YOUTUBE (Si tienes conexión y quieres enlazarlo directo) -->
+                <!-- Cambia la URL que hay en 'src'. 
+                     Ejemplo actual: Charlie Chaplin - The Lion's Cage -->
+                <!--
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/79i84xYelZI?mute=1" title="Reproductor de vídeo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
+                -->
+                
+                <!-- ======================================================================== -->
+
+            </div>
+            <!-- FIN HUECO MULTIMEDIA -->
+
+            <div class="exercise-box">
+                <h4>✍️ Ejercicios: Análisis Cinésico</h4>
+                <ul class="task-list">
+                    <li>Mientras el profesor proyecta el vídeo sugerido en la pizarra (sin sonido), anota en tu cuaderno 5 gestos concretos del protagonista y clasifícalos (¿es un emblema, un ilustrador o un adaptador nervioso?). Explica qué significan en ese contexto.</li>
+                    <li><strong>Juego mudo:</strong> Intenta transmitirle a tu compañero de mesa el siguiente mensaje SOLO con tus manos y rostro (no puedes mover los labios para que te lea): <em>"Tengo mucha hambre, pero no tengo dinero, ¿me prestas algo?"</em></li>
+                </ul>
+            </div>
+
+            <!-- SUBAPARTADO 4.3 -->
+            <h3>4.3. Proxémica (El Espacio)</h3>
+            <div class="theory-box">
+                <p>Estudia cómo usamos el espacio vital. Tenemos una "burbuja" invisible. Las distancias son: íntima (abrazos), personal (amigos charlando), social (mostrador de una tienda) y pública (un discurso). Si un desconocido invade nuestra zona íntima, sentimos ansiedad y nos alejamos.</p>
+            </div>
+
+            <div class="exercise-box">
+                <h4>✍️ Ejercicios: El Mapa Espacial</h4>
+                <ul class="task-list">
+                    <li><strong>El experimento del ascensor:</strong> Redacta un párrafo describiendo detalladamente cómo actúa la gente en un ascensor. ¿Hacia dónde miran? ¿Dónde se colocan? Utiliza la teoría de la proxémica para explicar por qué ocurre ese comportamiento automático.</li>
+                    <li>Dibuja en tu cuaderno un croquis (visto desde arriba) de cómo se distribuirían espacialmente 4 personas desconocidas en la sala de espera de un médico vacía, y cómo cambiaría esa distribución si esas 4 personas fueran un grupo de amigos.</li>
+                </ul>
             </div>
         </section>
 
-        <!-- ==================== SECCIÓN 5: QUIZ JS ==================== -->
+        <!-- ==================== SECCIÓN 5 ==================== -->
         <section id="quiz">
-            <h2>5. Laboratorio Pragmático (Simulador Interactivo)</h2>
-            <p>Pon a prueba tus conocimientos. Analiza cuidadosamente cada escenario y selecciona la respuesta teórica correcta.</p>
+            <h2>5. Simulador Pragmático (Autoevaluación)</h2>
+            <p>Lee la pantalla en la pizarra y anota tus respuestas (A, B, C o D) en el cuaderno. Luego comprobad las respuestas en voz alta.</p>
 
             <div class="quiz-container">
                 <div class="quiz-header">
-                    <div style="font-size: 1.2rem; font-weight: bold; color: #a7f3d0;">Simulador de Inferencias</div>
-                    <div style="font-size: 1.2rem; font-weight: bold;">Progreso: <span id="q-current">1</span> / <span id="q-total">X</span></div>
+                    <div>Reto <span id="q-current">1</span> de <span id="q-total">X</span></div>
                 </div>
                 
-                <div class="question-text" id="question">Cargando simulador...</div>
-                
-                <div class="options" id="options-container">
-                    <!-- Botones generados por JS -->
-                </div>
-                
+                <div class="question-text" id="question">Cargando...</div>
+                <div class="options" id="options-container"></div>
                 <div class="feedback" id="feedback"></div>
-                <button class="next-btn" id="next-btn">Siguiente Escenario &#8594;</button>
+                
+                <button class="next-btn" id="next-btn">Siguiente Reto &#8594;</button>
             </div>
         </section>
 
     </div>
 
-    <!-- ==================== JAVASCRIPT DEL SIMULADOR ==================== -->
     <script>
         const quizData = [
             {
-                q: "Un político pierde unas elecciones estrepitosamente. Al salir a la prensa dice: 'Bueno, los resultados han sido manifiestamente mejorables'. ¿Qué fenómeno ocurre aquí?",
+                q: "Si en un examen oficial de Historia escribes: 'Los reyes católicos estaban to rayados con Colón y le dieron la pasta', el principal fallo comunicativo es de:",
                 options: [
-                    "Es un acto perlocutivo directo y claro sin dobles sentidos.",
-                    "Viola la máxima de Cualidad/Cantidad para crear un eufemismo que roza la ironía.",
-                    "Es un error de deixis espacial.",
-                    "Mantiene un registro excesivamente coloquial."
+                    "A) Paralingüística, por el uso de mayúsculas.",
+                    "B) Adecuación al registro, confundiendo el eje horizontal (solidaridad) con el vertical (jerarquía académica).",
+                    "C) Deixis espacial, porque no se especifica el lugar.",
+                    "D) Cinésica, por la agresividad verbal."
                 ],
                 correct: 1,
-                explanation: "Al evitar palabras como 'desastre', juega con las máximas de Grice. El contexto sociohistórico obliga a los periodistas a inferir la magnitud de la derrota."
+                explanation: "El registro coloquial y la jerga juvenil pertenecen al eje de solidaridad, y son inaceptables en un contexto institucional formal (eje vertical/poder)."
             },
             {
-                q: "El profesor levanta la mano derecha con la palma abierta hacia los alumnos ruidosos, esperando que se haga el silencio. Este gesto es un elemento cinésico de tipo:",
+                q: "Un camarero te pregunta: '¿Qué van a tomar los señores?'. El uso de 'señores' en tercera persona en lugar de 'vosotros' es una marca de:",
                 options: [
-                    "Adaptador.",
-                    "Emblema.",
-                    "Proxémico.",
-                    "Paralingüístico sonoro."
-                ],
-                correct: 1,
-                explanation: "Los emblemas son actos no verbales que tienen una traducción verbal directa ('alto', 'parad') conocida por todos los miembros de una cultura."
-            },
-            {
-                q: "A: '¿Vienes a la fiesta el sábado?'. B: 'Tengo examen de Matemáticas el lunes'. Según la teoría pragmática de Grice, ¿qué ocurre en la mente de A?",
-                options: [
-                    "A percibe que B cambia de tema y la comunicación fracasa.",
-                    "A procesa el exceso de información inútil de B.",
-                    "A asume que B coopera e infiere la implicatura ('Tengo que estudiar, no voy').",
-                    "A percibe un fallo en la deixis temporal."
+                    "A) Extimidad digital.",
+                    "B) Implicatura irónica de Grice.",
+                    "C) Cortesía para marcar distancia social y respeto en el eje vertical.",
+                    "D) Un error de deixis de persona."
                 ],
                 correct: 2,
-                explanation: "La violación aparente de la máxima de Relación fuerza a A a buscar la conexión lógica, entendiendo el rechazo indirecto a la invitación."
+                explanation: "Tratar de usted o en tercera persona es la forma clásica de establecer distancia de respeto en interacciones comerciales o asimétricas."
             },
             {
-                q: "El director de la empresa le dice a un empleado: 'Me encantaría que el informe estuviera en mi mesa antes de las 5'. ¿Qué tipo de acto de habla es?",
+                q: "Alguien dice: 'Mañana te traigo el libro'. Para entender cuándo es ese 'mañana', necesitamos imprescindiblemente:",
                 options: [
-                    "Acto locutivo sin significado pragmático.",
-                    "Acto ilocutivo indirecto (una orden mitigada por cortesía).",
-                    "Acto ilocutivo directo (una petición de permiso).",
-                    "Un error del canal."
+                    "A) El contexto situacional (saber qué día exacto se ha dicho la frase).",
+                    "B) El contexto cotextual.",
+                    "C) El contexto sociohistórico.",
+                    "D) La máxima de cantidad."
                 ],
-                correct: 1,
-                explanation: "La forma es una declaración de un deseo propio, pero debido a la asimetría de poder (eje vertical), funciona de facto como una orden (directiva)."
+                correct: 0,
+                explanation: "'Mañana' es un deíctico temporal puro. Solo se comprende si conocemos el 'ahora' del hablante."
             },
             {
-                q: "Durante una exposición oral importante, te tocas constantemente el anillo, te ajustas las gafas sin necesidad y jugueteas con el bolígrafo. Estos gestos son:",
+                q: "En clase, te tocas compulsivamente el pelo, muerdes el capuchón del bolígrafo y mueves la pierna sin parar. Estos gestos son:",
                 options: [
-                    "Ilustradores cinésicos.",
-                    "Adaptadores cinésicos (reflejan nerviosismo).",
-                    "Elementos paralingüísticos.",
-                    "Reguladores de turno de palabra."
+                    "A) Ilustradores.",
+                    "B) Emblemas de rebeldía.",
+                    "C) Reguladores conversacionales.",
+                    "D) Adaptadores (gestos inconscientes de tensión o nervios)."
                 ],
-                correct: 1,
-                explanation: "Los adaptadores son movimientos, a menudo inconscientes, que el cuerpo realiza para canalizar la tensión psicológica o adaptarse a situaciones de estrés."
+                correct: 3,
+                explanation: "Los adaptadores son movimientos que hacemos para canalizar emociones, relajarnos o liberar tensión, muchas veces sin darnos cuenta."
             },
             {
-                q: "Una nota manuscrita hallada en un libro antiguo dice: 'Mi abuelo plantó este roble mañana'. El enunciado es absurdo debido a un problema con:",
+                q: "Preguntas: '¿A qué hora empieza la película?'. Te responden: 'Los cines están en huelga hoy'. ¿Qué se infiere pragmáticamente?",
                 options: [
-                    "La distancia social.",
-                    "El registro coloquial.",
-                    "La deixis temporal.",
-                    "La máxima de modo de Grice."
+                    "A) Que la película empieza tarde.",
+                    "B) Que la comunicación ha fallado por falta de paralingüística.",
+                    "C) Que la película no se va a proyectar (acto ilocutivo indirecto derivado de violar la máxima de relación).",
+                    "D) Que el cine está demasiado cerca (proxémica)."
                 ],
                 correct: 2,
-                explanation: "Los deícticos temporales organizan el tiempo respecto al momento en que se habla. El pretérito 'plantó' choca irremediablemente con el adverbio de futuro 'mañana'."
+                explanation: "Al cambiar de tema, el hablante te obliga a conectar los conceptos: si hay huelga, los cines están cerrados, por tanto, no hay película."
             },
             {
-                q: "Entras al metro y, aunque está casi vacío, te sientas justo en el asiento de al lado de la única persona que hay en el vagón. Esa persona te mira mal y se levanta. ¿Qué regla has violado?",
+                q: "Hacer el gesto de 'silencio' llevando el dedo índice a los labios cerrados es, dentro de la cinésica:",
                 options: [
-                    "La paralingüística del transporte público.",
-                    "Las normas de la proxémica sobre el espacio personal/íntimo de desconocidos.",
-                    "El principio de cooperación de Grice.",
-                    "El acto locutivo directo."
+                    "A) Un ilustrador.",
+                    "B) Un emblema (un gesto que sustituye a una palabra exacta).",
+                    "C) Un adaptador nervioso.",
+                    "D) Una violación proxémica."
                 ],
                 correct: 1,
-                explanation: "La proxémica dicta que en espacios públicos abiertos tendemos a maximizar la distancia física con los desconocidos para proteger nuestra zona de confort espacial."
+                explanation: "Los emblemas tienen una traducción verbal directa y están pactados culturalmente."
             },
             {
-                q: "En un correo al profesor escribes: 'Profe, pasame los apuntes q no fui a clase xfa'. El profesor te contesta pidiendo que reescribas el correo. ¿Cuál es el problema principal?",
+                q: "Una madre entra al cuarto desordenado de su hijo y exclama: '¡Qué maravilla de orden, da gusto entrar!'. Está violando la máxima de:",
                 options: [
-                    "Fallo en el acto locutivo (no se entiende el idioma).",
-                    "Falta de adecuación al eje vertical (uso de registro coloquial extremo y tuteo en ámbito formal/académico).",
-                    "Uso excesivo de elementos cinésicos.",
-                    "Ausencia total de contexto situacional."
+                    "A) Cualidad (dice lo que es falso para crear ironía).",
+                    "B) Cantidad (habla demasiado).",
+                    "C) Relación (cambia de tema).",
+                    "D) Modo (es ambigua)."
+                ],
+                correct: 0,
+                explanation: "Al decir algo patentemente falso en ese contexto, genera una implicatura irónica para reprochar el desorden (acto ilocutivo indirecto)."
+            },
+            {
+                q: "En una biblioteca pública casi vacía, te sientas en la misma mesa, codo con codo, con un desconocido. El desconocido se molesta porque has alterado las reglas de:",
+                options: [
+                    "A) La cinésica.",
+                    "B) La proxémica (invasión del espacio personal/íntimo).",
+                    "C) El contexto cotextual.",
+                    "D) El acto locutivo."
                 ],
                 correct: 1,
-                explanation: "La relación alumno-profesor tiene cierta asimetría jerárquica (eje vertical). Usar la misma ortografía y registro que usarías con un amigo por WhatsApp (eje horizontal) resulta inadecuado en este canal."
+                explanation: "La proxémica dicta que, en espacios públicos amplios, debemos mantener la distancia social o pública con los desconocidos."
             }
         ];
 
-        let currentQuestion = 0;
-        let score = 0;
-
-        const questionEl = document.getElementById('question');
-        const optionsContainer = document.getElementById('options-container');
-        const feedbackEl = document.getElementById('feedback');
+        let currentQ = 0;
+        const qEl = document.getElementById('question');
+        const optsEl = document.getElementById('options-container');
         const nextBtn = document.getElementById('next-btn');
-        const currentTotalEl = document.getElementById('q-current');
-        const totalEl = document.getElementById('q-total');
+        const curEl = document.getElementById('q-current');
+        const totEl = document.getElementById('q-total');
+        
+        totEl.textContent = quizData.length;
 
-        totalEl.textContent = quizData.length;
-
-        function loadQuestion() {
-            feedbackEl.style.display = 'none';
+        function loadQ() {
             nextBtn.style.display = 'none';
-            optionsContainer.innerHTML = '';
-            currentTotalEl.textContent = currentQuestion + 1;
-
-            const q = quizData[currentQuestion];
-            questionEl.textContent = q.q;
-
-            q.options.forEach((opt, index) => {
+            optsEl.innerHTML = '';
+            curEl.textContent = currentQ + 1;
+            
+            const q = quizData[currentQ];
+            qEl.textContent = q.q;
+            
+            q.options.forEach((opt, idx) => {
                 const btn = document.createElement('button');
-                btn.classList.add('option-btn');
+                btn.className = 'option-btn';
                 btn.textContent = opt;
-                btn.addEventListener('click', () => checkAnswer(index, btn));
-                optionsContainer.appendChild(btn);
+                btn.onclick = () => check(idx, btn);
+                optsEl.appendChild(btn);
             });
         }
 
-        function checkAnswer(selectedIndex, btn) {
-            const q = quizData[currentQuestion];
-            const allBtns = optionsContainer.querySelectorAll('.option-btn');
+        function check(sel, btn) {
+            const q = quizData[currentQ];
+            const btns = optsEl.querySelectorAll('.option-btn');
+            btns.forEach(b => b.disabled = true);
             
-            allBtns.forEach(b => b.disabled = true);
-
-            if (selectedIndex === q.correct) {
+            if(sel === q.correct) {
                 btn.classList.add('correct');
-                score++;
-                showFeedback("¡Correcto! " + q.explanation, true);
             } else {
                 btn.classList.add('wrong');
-                allBtns[q.correct].classList.add('correct');
-                showFeedback("Revisión necesaria: " + q.explanation, false);
+                btns[q.correct].classList.add('correct');
             }
-
+            
             nextBtn.style.display = 'block';
-            
-            if (currentQuestion === quizData.length - 1) {
-                nextBtn.textContent = 'Ver Calificación Final';
-            }
         }
 
-        function showFeedback(text, isCorrect) {
-            feedbackEl.textContent = text;
-            feedbackEl.style.display = 'block';
-            feedbackEl.style.backgroundColor = isCorrect ? 'rgba(16, 185, 129, 0.2)' : 'rgba(239, 68, 68, 0.2)';
-            feedbackEl.style.color = isCorrect ? '#0f766e' : '#991b1b';
-            feedbackEl.style.border = `1px solid ${isCorrect ? '#10b981' : '#ef4444'}`;
-        }
-
-        nextBtn.addEventListener('click', () => {
-            currentQuestion++;
-            if (currentQuestion < quizData.length) {
-                loadQuestion();
+        nextBtn.onclick = () => {
+            currentQ++;
+            if(currentQ < quizData.length) {
+                loadQ();
             } else {
-                showResults();
+                qEl.textContent = "¡Simulación completada! Repasad los fallos en la pizarra.";
+                optsEl.innerHTML = '';
+                nextBtn.textContent = "Reiniciar";
+                nextBtn.onclick = () => { currentQ = 0; loadQ(); };
             }
-        });
+        };
 
-        function showResults() {
-            questionEl.textContent = "Evaluación Pragmática Finalizada";
-            let msg = "";
-            let percentage = (score / quizData.length) * 100;
-
-            if (percentage === 100) {
-                msg = "¡Excelente! Has demostrado un nivel de análisis sobresaliente.";
-            } else if (percentage >= 60) {
-                msg = "¡Buen trabajo! Dominas las bases prácticas de la teoría de la comunicación.";
-            } else {
-                msg = "Es importante repasar la teoría de los saberes básicos y volver a intentar el simulador.";
-            }
-
-            optionsContainer.innerHTML = `
-                <div style="background: #334155; padding: 2rem; border-radius: 8px; text-align: center;">
-                    <h2 style="color: #a7f3d0; border: none; margin-bottom: 0.5rem; font-size: 3rem;">${score} / ${quizData.length}</h2>
-                    <p style="font-size: 1.2rem;">${msg}</p>
-                </div>
-            `;
-            
-            feedbackEl.style.display = 'none';
-            nextBtn.textContent = 'Reiniciar Simulador';
-            
-            const newBtn = nextBtn.cloneNode(true);
-            nextBtn.parentNode.replaceChild(newBtn, nextBtn);
-            newBtn.addEventListener('click', () => {
-                currentQuestion = 0;
-                score = 0;
-                loadQuestion();
-                
-                const finalBtn = newBtn.cloneNode(true);
-                newBtn.parentNode.replaceChild(finalBtn, newBtn);
-                finalBtn.textContent = 'Siguiente Escenario \u2192';
-                finalBtn.addEventListener('click', () => {
-                    currentQuestion++;
-                    if (currentQuestion < quizData.length) {
-                        loadQuestion();
-                    } else {
-                        showResults();
-                    }
-                });
-            });
-        }
-
-        loadQuestion();
+        loadQ();
     </script>
 </body>
 </html>
