@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloque B: Comunicación. Componentes del hecho comunicativo</title>
+    <title>Bloque B: Comunicación Integral - 1º Bachillerato</title>
     <style>
         /* ==================== VARIABLES Y RESET ==================== */
         :root {
-            --primary: #1e3a8a; /* Azul profundo */
-            --secondary: #b91c1c; /* Rojo carmesí */
-            --accent: #059669; /* Verde esmeralda */
+            --primary: #1e3a8a; 
+            --secondary: #b91c1c; 
+            --accent: #059669; 
             --bg-body: #f8fafc;
             --bg-card: #ffffff;
             --text-main: #334155;
@@ -83,7 +83,7 @@
         
         p { margin-bottom: 1rem; }
         
-        /* ==================== CAJAS DE TEORÍA Y ETIMOLOGÍA ==================== */
+        /* ==================== CAJAS DE TEORÍA Y TEXTOS ==================== */
         .etymology-box {
             background-color: #f1f5f9;
             border-left: 4px solid var(--primary);
@@ -100,6 +100,26 @@
             padding: 1.5rem;
             border-radius: 8px;
             margin: 1.5rem 0;
+        }
+        
+        .text-analysis-box {
+            background-color: #fff;
+            border: 1px solid #cbd5e1;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .blockquote-style {
+            border-left: 4px solid var(--accent);
+            padding-left: 1.5rem;
+            font-family: var(--font-serif);
+            color: #475569;
+            margin: 1rem 0;
+            background: #f8fafc;
+            padding: 1rem 1.5rem;
+            border-radius: 0 8px 8px 0;
         }
 
         /* ==================== RETOS Y TAREAS (UI) ==================== */
@@ -202,13 +222,18 @@
             header { padding: 3rem 1rem; }
             header h1 { font-size: 2rem; }
             section { padding: 1.5rem; }
+            .text-comparison { flex-direction: column; }
         }
+        
+        .text-comparison { display: flex; gap: 1.5rem; margin-top: 1.5rem; }
+        .text-comparison > div { flex: 1; padding: 1.5rem; border-radius: 8px; }
     </style>
 </head>
 <body>
 
     <header>
         <h1>La Comunicación Humana: Más Allá del Código</h1>
+        <p>Cuaderno Interactivo de Trabajo | Saberes Básicos LOMLOE | 1º Bachillerato</p>
     </header>
 
     <nav>
@@ -229,48 +254,62 @@
                 <strong>La raíz de la palabra:</strong> "Texto" y "Contexto" provienen del latín <em>textus</em> y <em>contexere</em>, que significan "tejido" y "tejer juntos". Las palabras no flotan en el vacío; forman una urdimbre con la realidad que las rodea. Sin el marco que las entrelaza, el significado se deshilacha.
             </div>
 
-            <p>El esquema de comunicación tradicional (emisor, receptor, mensaje, canal...) es insuficiente. No somos telégrafos. La comunicación humana se basa en la <strong>ostensión</strong> (mostrar la intención de comunicar) y la <strong>inferencia</strong> (deducir lo que el otro quiere decir). Para que la inferencia funcione, necesitamos el contexto.</p>
+            <p>El esquema de comunicación tradicional es insuficiente. La comunicación humana se basa en la <strong>ostensión</strong> (mostrar la intención de comunicar) y la <strong>inferencia</strong> (deducir lo que el otro quiere decir). Para que la inferencia funcione, necesitamos el contexto.</p>
 
             <div class="theory-highlight">
                 <h3>Dimensiones del Contexto</h3>
                 <ul>
-                    <li><strong>1. Contexto Situacional (Espaciotemporal):</strong> Es el entorno físico inmediato. Aquí operan los <em>deícticos</em> (del griego <em>deixis</em>, 'señalar'). Palabras como "yo", "tú", "aquí", "mañana", "esto" carecen de significado léxico pleno; su sentido depende enteramente de quién habla y dónde está. Imagínate que encuentras una nota en el suelo de un sendero que dice: <em>"Te espero aquí cuando caiga el sol"</em>. Sin saber si "aquí" es un claro en el Pinar del Abalario o la plaza del pueblo, el mensaje es un enigma.</li>
-                    <li><strong>2. Contexto Lingüístico (Cotexto):</strong> Son las palabras que rodean a un término. Resuelve la polisemia y la homonimia. (Ej: "Coge el <em>gato</em> del coche" -> el cotexto "coche" nos infiere la herramienta, no el animal).</li>
+                    <li><strong>1. Contexto Situacional (Espaciotemporal):</strong> Es el entorno físico inmediato. Aquí operan los <em>deícticos</em> (del griego <em>deixis</em>, 'señalar'). Palabras como "yo", "tú", "aquí", "mañana", "esto" carecen de significado léxico pleno; su sentido depende enteramente de quién habla y dónde está.</li>
+                    <li><strong>2. Contexto Lingüístico (Cotexto):</strong> Son las palabras que rodean a un término. Resuelve la polisemia y la homonimia.</li>
                     <li><strong>3. Contexto Sociohistórico (Enciclopedia Cognitiva):</strong> El bagaje cultural y los conocimientos compartidos. Las presuposiciones, la ironía, las referencias históricas o los tabúes culturales dependen de esto.</li>
                 </ul>
             </div>
 
+            <div class="text-analysis-box">
+                <h4>🔍 Texto de Análisis: Los Deícticos en acción</h4>
+                <p>Lee detenidamente el siguiente fragmento anónimo:</p>
+                <div class="blockquote-style">
+                    "Ayer vine aquí buscándote, pero me dijeron que tú ya te habías ido. Eso no me gustó nada. Mañana volveremos a intentarlo en este mismo lugar, trae contigo aquello de lo que hablamos."
+                </div>
+                <p><strong>Reflexión:</strong> Extrae todas las palabras cuyo significado real dependa de saber en qué momento exacto del calendario se dijo la frase, el lugar geográfico donde estaban pisando y la identidad de los interlocutores.</p>
+            </div>
+
             <!-- ZONA DE RETOS: CONTEXTO -->
             <div class="challenge-zone">
-                <h3>🛠️ Retos de Aula: Contexto e Inferencia</h3>
-                <p>Proyecta estos retos en clase. Los alumnos deben debatir la solución antes de revelar el contenido.</p>
+                <h3>🛠️ Taller Práctico: Contexto e Inferencia</h3>
+                <p>Resolved los siguientes retos trabajando en parejas o pequeños grupos.</p>
                 
                 <details>
-                    <summary>Reto 1.1: El secuestro de los deícticos</summary>
+                    <summary>Reto 1.1: El mensaje secuestrado</summary>
                     <div class="details-content">
-                        <p><strong>Situación:</strong> Entras al aula y encuentras escrito en la pizarra: <em>"Ayer os dije que trajerais eso aquí, pero como él no lo hizo, lo haremos mañana"</em>.</p>
-                        <p><strong>Tarea:</strong> Identificad todos los deícticos. ¿Por qué este mensaje es un fracaso comunicativo si no estabais en la clase anterior?</p>
-                        <p><strong>Solución para el profesor:</strong> Los deícticos son <em>Ayer, os, eso, aquí, él, lo, mañana</em>. Falta el contexto situacional y el conocimiento compartido previo (cotexto histórico) para anclar esas referencias a la realidad.</p>
+                        <p><strong>Situación:</strong> Entras al aula y encuentras escrito en la pizarra lo siguiente:</p>
+                        <div class="blockquote-style" style="text-align: center; font-size: 1.2rem; font-weight: bold;">
+                            "Ayer os dije que trajerais eso aquí, pero como él no lo hizo, lo haremos mañana."
+                        </div>
+                        <p><strong>Misión:</strong> Identificad todos los elementos deícticos. Elaborad una lista y explicad por qué este mensaje es un fracaso comunicativo absoluto para vosotros si habéis faltado a las dos últimas clases.</p>
                     </div>
                 </details>
 
                 <details>
                     <summary>Reto 1.2: Choque Sociohistórico</summary>
                     <div class="details-content">
-                        <p><strong>Situación:</strong> Un titular de periódico en 1980 dice: <em>"La movida madrileña toma las calles"</em>. Un extraterrestre (o una IA sin datos culturales) traduce "movida" como "desplazamiento físico".</p>
-                        <p><strong>Tarea:</strong> Explicad qué tipo de contexto falla aquí y cómo lo explicaríais a alguien que está aprendiendo español.</p>
-                        <p><strong>Solución para el profesor:</strong> Falla el contexto sociohistórico/cultural. "Movida" exige una enciclopedia mental que incluya la transición española y el movimiento contracultural de los 80.</p>
+                        <p><strong>Situación:</strong> Leemos el siguiente titular real de la prensa española de los años 80:</p>
+                        <div class="blockquote-style" style="text-align: center; font-size: 1.2rem; font-weight: bold; background: #e2e8f0;">
+                            "La movida madrileña toma las calles."
+                        </div>
+                        <p>Un programa de traducción automática (sin contexto cultural) traduce "movida" como "desplazamiento físico" y "toma" como "bebe".</p>
+                        <p><strong>Misión:</strong> Explicad qué tipo de contexto falla aquí y redactad un párrafo explicando a un estudiante extranjero qué conocimientos previos (enciclopedia cognitiva) necesita para entender este titular correctamente.</p>
                     </div>
                 </details>
 
                 <div class="task-grid">
                     <div class="task-card">
-                        <h4>📝 Tarea: El Mensaje Fragmentado</h4>
-                        <p>Escribe un diálogo de 6 líneas lleno de pronombres y adverbios deícticos (sin usar nombres propios ni sustantivos específicos). Pásalo al compañero de al lado para que intente "reconstruir" el contexto situacional inventándose quiénes hablan, dónde están y de qué hablan.</p>
+                        <h4>📝 Creación: El Mensaje Cifrado</h4>
+                        <p>Escribe en tu cuaderno un diálogo de 6-8 líneas lleno de pronombres y adverbios deícticos (sin usar nombres propios, lugares geográficos concretos ni sustantivos específicos). Intercámbialo con un compañero para que intente "reconstruir" el contexto situacional inventándose la escena.</p>
                     </div>
                     <div class="task-card">
-                        <h4>📝 Tarea: Análisis de un Meme</h4>
-                        <p>Traed a clase un meme actual. Explicad por escrito qué conocimientos previos (contexto sociohistórico) debe tener el receptor para entender el chiste. Sin ese contexto, ¿qué significa literalmente la imagen?</p>
+                        <h4>📝 Investigación: El Contexto del Meme</h4>
+                        <p>Busca en tu móvil un meme de actualidad. Redacta un texto expositivo de unas 100 palabras explicando al detalle todo el <em>contexto sociohistórico</em> que debe tener el receptor para entender el chiste. Sin ese contexto, ¿qué significa literalmente la imagen?</p>
                     </div>
                 </div>
             </div>
@@ -285,46 +324,57 @@
             <div class="theory-highlight">
                 <h3>Los Ejes de la Relación Social</h3>
                 <ul>
-                    <li><strong>Eje Vertical (Poder / Jerarquía):</strong> Relaciones asimétricas. Médico-paciente, tribunal-acusado, examinador-alumno. A mayor asimetría, mayor necesidad de un registro formal, fórmulas de tratamiento (usted, señoría) y cortesía negativa (no imponerse).</li>
-                    <li><strong>Eje Horizontal (Solidaridad / Familiaridad):</strong> Relaciones simétricas. Amigos, hermanos, compañeros. Permite el registro coloquial, el tuteo, la economía del lenguaje (elipsis) y el léxico expresivo.</li>
+                    <li><strong>Eje Vertical (Poder / Jerarquía):</strong> Relaciones asimétricas. Médico-paciente, tribunal-acusado, examinador-alumno. A mayor asimetría, mayor necesidad de un registro formal, fórmulas de tratamiento y cortesía negativa (no imponerse).</li>
+                    <li><strong>Eje Horizontal (Solidaridad / Familiaridad):</strong> Relaciones simétricas. Amigos, hermanos, compañeros. Permite el registro coloquial, el tuteo, la economía del lenguaje y el léxico expresivo.</li>
                 </ul>
                 
-                <h3>Público vs. Privado: El fenómeno de la "Extimidad"</h3>
-                <p>Históricamente, el canal marcaba el ámbito: la televisión era pública, la carta era privada. Hoy, las redes sociales generan <strong>extimidad</strong> (hacer público lo íntimo). Un tweet o un vídeo de TikTok pueden usar un registro de solidaridad extrema (eje horizontal) pero tener una audiencia masiva y pública, generando fricciones comunicativas (ej. cuando un profesor ve el TikTok de un alumno, o un jefe el de un empleado).</p>
+                <h3>Público vs. Privado: La "Extimidad"</h3>
+                <p>Hoy, las redes sociales generan <strong>extimidad</strong> (hacer público lo íntimo). Un vídeo puede usar un registro de solidaridad extrema pero tener una audiencia masiva y pública, generando fricciones si el receptor real no es el receptor ideal esperado.</p>
+            </div>
+
+            <div class="text-analysis-box">
+                <h4>🔍 Análisis Comparativo: El mismo mensaje, dos mundos</h4>
+                <p>Lee estos dos textos que comunican exactamente la misma realidad objetiva:</p>
+                <div class="text-comparison">
+                    <div style="background:#f1f5f9; border-left: 4px solid var(--primary);">
+                        <strong>Texto A (Correo electrónico institucional):</strong><br><br>
+                        "Estimado profesorado:<br>Por la presente, se insta a que procedan al desalojo de las instalaciones docentes con la mayor celeridad posible debido a incidencias de carácter técnico en el suministro eléctrico de la zona central del edificio. Rogamos disculpen las molestias. Un cordial saludo."
+                    </div>
+                    <div style="background:#dcf8c6; border-left: 4px solid #25D366;">
+                        <strong>Texto B (Grupo de WhatsApp de 1º Bachillerato):</strong><br><br>
+                        "illo salid ya del insti q se ha ido la luz otra vez en el bloque principal y nos echan rapidito 🏃‍♂️💨 nos vemos en el parque!!!!"
+                    </div>
+                </div>
+                <p style="margin-top: 1rem;"><strong>Reflexión:</strong> Señala las fórmulas de tratamiento, el tipo de léxico (cultismos vs. vulgarismos/coloquialismos) y los recursos tipográficos que marcan la diferencia de registro.</p>
             </div>
 
             <!-- ZONA DE RETOS: FORMALIDAD -->
             <div class="challenge-zone">
-                <h3>🛠️ Retos de Aula: El Camaleón Lingüístico</h3>
+                <h3>🛠️ Taller Práctico: El Camaleón Lingüístico</h3>
                 
                 <details>
                     <summary>Reto 2.1: El termómetro del "Tú" y el "Usted"</summary>
                     <div class="details-content">
-                        <p><strong>Debate:</strong> ¿En qué situaciones exactas usarías el "usted" hoy en día? ¿Depende de la edad, del cargo, o de la situación geográfica (Andalucía vs. otras zonas de España/Hispanoamérica)? ¿Qué ocurre si tratas de usted a alguien de 30 años en un bar?</p>
-                        <p><strong>Enfoque:</strong> Analizar cómo el "usted" marca distancia (eje vertical) y cómo su uso indebido puede ofender (hacer sentir viejo al otro) o resultar irónico.</p>
+                        <p><strong>Debate en asamblea:</strong> Elaborad una lista en la pizarra de situaciones exactas en las que usaríais el "usted" hoy en día. ¿Depende exclusivamente de la edad? ¿Del cargo? ¿Qué ocurre si tratas de usted a alguien de 30 años en un bar de tu barrio? ¿Cómo varía este uso según la zona de Andalucía u otras partes de España?</p>
                     </div>
                 </details>
 
                 <details>
                     <summary>Reto 2.2: Traducción de Registros (Role-play)</summary>
                     <div class="details-content">
-                        <p><strong>Situación:</strong> Has roto accidentalmente la ventana del instituto con un balón.</p>
-                        <p><strong>Tarea (Teatro en clase):</strong> 
-                            1. Pareja A: Explica el suceso a tu mejor amigo por WhatsApp (máxima solidaridad, privado).
-                            2. Pareja B: Explica el mismo suceso a la directora en su despacho (asimetría de poder, formal).
+                        <p><strong>Situación base:</strong> Has roto accidentalmente el proyector digital del aula al tropezar con el cable.</p>
+                        <p><strong>Dinámica de actuación:</strong> 
+                            <br>1. <em>Pareja A:</em> Dramatizad la explicación del suceso a vuestro mejor amigo en el recreo (máxima solidaridad, registro coloquial).
+                            <br>2. <em>Pareja B:</em> Dramatizad la explicación del mismo suceso a la Dirección del centro en su despacho oficial (asimetría de poder, registro formal).
                         </p>
-                        <p>Analizad en la pizarra los cambios léxicos, sintácticos y las fórmulas de cortesía empleadas por los actores.</p>
+                        <p>El resto de la clase debe tomar nota de los cambios léxicos, sintácticos y proxémicos que realizan los actores.</p>
                     </div>
                 </details>
 
                 <div class="task-grid">
                     <div class="task-card">
-                        <h4>📝 Tarea: El Hilo Inadecuado</h4>
-                        <p>Busca en internet (o redacta uno inventado) un texto formal (ej. las normas de uso de una biblioteca). Transfórmalo en un hilo de "X" (Twitter) escrito por un <em>influencer</em> dirigiéndose a sus seguidores, abusando de la extimidad y el registro coloquial.</p>
-                    </div>
-                    <div class="task-card">
-                        <h4>📝 Tarea: Análisis de un Debate Político</h4>
-                        <p>Visualizad 3 minutos de un debate parlamentario. Anotad las fórmulas de tratamiento institucional ("señoría", "presidente") y contrastadlas con los momentos donde los políticos pierden los nervios y caen en el registro coloquial. ¿Qué pasa con el eje de poder en ese momento?</p>
+                        <h4>📝 Producción: La Instancia Inadecuada</h4>
+                        <p>Busca o redacta un texto altamente formal (por ejemplo, el reglamento del centro sobre puntualidad). Transfórmalo completamente en un guion para un vídeo de TikTok o un hilo de "X", dirigido a tus compañeros de clase, utilizando la jerga actual, emoticonos y apelando a la extimidad.</p>
                     </div>
                 </div>
             </div>
@@ -334,63 +384,63 @@
         <section id="intenciones">
             <h2>3. Propósitos Comunicativos e Interpretación de Intenciones</h2>
             
-            <p>La <strong>Pragmática</strong> es la disciplina que estudia el lenguaje en uso. Filósofos como J.L. Austin nos enseñaron que "hablar es hacer cosas". Las palabras no solo describen el mundo, lo transforman.</p>
+            <p>La <strong>Pragmática</strong> es la disciplina que estudia el lenguaje en uso. Las palabras no solo describen el mundo, lo transforman (hablar es actuar).</p>
 
             <div class="theory-highlight">
-                <h3>Teoría de los Actos de Habla (Austin y Searle)</h3>
+                <h3>Teoría de los Actos de Habla</h3>
                 <p>Todo enunciado realiza tres actos simultáneos:</p>
                 <ol>
-                    <li><strong>Acto Locutivo:</strong> La simple emisión física de sonidos/letras con significado y gramática.</li>
-                    <li><strong>Acto Ilocutivo:</strong> La <em>intención</em> real del emisor al hablar (prometer, amenazar, rogar, afirmar).</li>
-                    <li><strong>Acto Perlocutivo:</strong> El <em>efecto</em> que produce en el receptor (asustarlo, convencerlo, que haga una acción).</li>
+                    <li><strong>Acto Locutivo:</strong> La simple emisión física de sonidos con significado.</li>
+                    <li><strong>Acto Ilocutivo:</strong> La <em>intención</em> real del emisor (prometer, amenazar, ordenar).</li>
+                    <li><strong>Acto Perlocutivo:</strong> El <em>efecto</em> real producido en el receptor.</li>
                 </ol>
-                <p><strong>Actos Directos vs. Indirectos:</strong> Si digo "Abre la puerta", es directo. Si digo "Uy, qué calor hace aquí y la puerta está cerrada", mi acto locutivo es una afirmación, pero mi acto <em>ilocutivo</em> (indirecto) es una petición. Requiero que el receptor infiera mi intención.</p>
+                <p><strong>Actos Directos vs. Indirectos:</strong> Si digo "Abre la ventana", es directo. Si digo "Uy, qué ambiente más cargado hay aquí", mi intención (acto ilocutivo) sigue siendo que abras la ventana, pero lo formulo como un acto indirecto para ser más cortés.</p>
 
                 <h3 style="margin-top: 1.5rem;">El Principio de Cooperación (Paul Grice)</h3>
-                <p>Para comunicarnos, asumimos que el otro coopera. Grice estableció cuatro máximas:</p>
+                <p>Para comunicarnos, asumimos que el otro coopera cumpliendo estas cuatro máximas:</p>
                 <ul>
-                    <li><strong>Cantidad:</strong> Da la información necesaria (ni más, ni menos).</li>
-                    <li><strong>Cualidad:</strong> Di la verdad, no mientas ni digas algo sin pruebas.</li>
-                    <li><strong>Relación:</strong> Sé pertinente (no cambies de tema sin venir a cuento).</li>
-                    <li><strong>Modo:</strong> Sé claro y ordenado, evita la ambigüedad.</li>
+                    <li><strong>Cantidad:</strong> Da la información justa y necesaria.</li>
+                    <li><strong>Cualidad:</strong> Di la verdad, no digas nada sin pruebas.</li>
+                    <li><strong>Relación:</strong> Sé pertinente, no cambies de tema.</li>
+                    <li><strong>Modo:</strong> Sé claro y ordenado.</li>
                 </ul>
-                <p><em>Nota clave:</em> Cuando violamos una máxima de forma descarada e intencionada (ej. decir "¡Qué genio eres!" a alguien que acaba de tropezar), estamos generando una <strong>implicatura conversacional</strong> (en este caso, ironía). Violamos la máxima de cualidad para que el otro infiera lo contrario.</p>
+            </div>
+
+            <div class="text-analysis-box">
+                <h4>🔍 Análisis Textual: Implicaturas y Máximas Rotas</h4>
+                <p>Lee el siguiente diálogo cotidiano entre dos compañeros de piso:</p>
+                <div class="blockquote-style">
+                    — <strong>Carlos:</strong> ¿Qué te pareció la cena que nos preparó Marta anoche?<br>
+                    — <strong>Elena:</strong> Bueno... los platos que sacó eran preciosos, ¿verdad? Y el mantel hacía juego con las cortinas.
+                </div>
+                <p><strong>Reflexión:</strong> Fíjate en la respuesta de Elena. ¿Qué máxima de Grice está violando descaradamente? Al violar esta norma de forma tan obvia, ¿qué "implicatura" (mensaje oculto que Carlos debe inferir) está transmitiendo realmente sobre la comida de Marta?</p>
             </div>
 
             <!-- ZONA DE RETOS: INTENCIONES -->
             <div class="challenge-zone">
-                <h3>🛠️ Retos de Aula: Detectives Pragmáticos</h3>
+                <h3>🛠️ Taller Práctico: Detectives Pragmáticos</h3>
                 
                 <details>
-                    <summary>Reto 3.1: Descifrando Actos Indirectos</summary>
+                    <summary>Reto 3.1: Catálogo de Actos Indirectos</summary>
                     <div class="details-content">
-                        <p><strong>Enunciados a analizar:</strong> ¿Cuál es el verdadero acto ilocutivo (intención) detrás de estas frases?</p>
+                        <p><strong>Análisis:</strong> Debatid cuál es el verdadero <em>acto ilocutivo</em> (la intención profunda) detrás de cada uno de estos enunciados pronunciados en contextos específicos:</p>
                         <ol>
-                            <li>(En la mesa) "¿Alguien sabe si queda agua en la nevera?"</li>
-                            <li>(Madre a hijo adolescente) "Bonitas horas de llegar."</li>
-                            <li>(Profesor en clase ruidosa) "Me parece que estoy interrumpiendo vuestra charla."</li>
+                            <li>(En medio de la cena familiar) <em>"¿Alguien sabe si queda agua fresca en la nevera?"</em></li>
+                            <li>(Una madre a su hijo que llega de madrugada) <em>"Bonitas horas de llegar a casa."</em></li>
+                            <li>(Un profesor mirando al fondo de una clase ruidosa) <em>"Me parece que mi explicación está interrumpiendo vuestra charla."</em></li>
+                            <li>(En una tienda, mirando un jersey sin etiqueta) <em>"¿A cómo están estos?"</em></li>
                         </ol>
-                        <p><strong>Solución:</strong> 1. Petición (Tráeme agua). 2. Reproche/Queja (Llegas tarde). 3. Orden (Callaos de una vez). Todos son actos ilocutivos indirectos.</p>
-                    </div>
-                </details>
-
-                <details>
-                    <summary>Reto 3.2: Rompiendo a Grice</summary>
-                    <div class="details-content">
-                        <p><strong>Situación:</strong> Alumno A: "¿Qué te ha parecido la película de 3 horas que fuimos a ver ayer?" / Alumno B: "Bueno... los asientos del cine eran muy cómodos".</p>
-                        <p><strong>Pregunta:</strong> ¿Qué máxima de Grice está violando descaradamente el Alumno B y qué <em>implicatura</em> (mensaje oculto) debemos inferir?</p>
-                        <p><strong>Solución:</strong> Viola la máxima de Relación (y Cantidad). Al hablar de los asientos en lugar de la trama, genera la implicatura de que la película fue aburrida o mala, pero no quiere decirlo directamente por cortesía.</p>
                     </div>
                 </details>
 
                 <div class="task-grid">
                     <div class="task-card">
-                        <h4>📝 Tarea: El Catálogo de la Ironía</h4>
-                        <p>Buscad en grupos tres titulares satíricos (ej. de El Mundo Today). Analizad paso a paso cómo se transgrede la máxima de Cualidad (verdad) para construir el humor. ¿Qué conocimiento previo necesita el lector para no creerse el titular?</p>
+                        <h4>📝 Búsqueda: La Ironía Satírica</h4>
+                        <p>Navegad por internet y buscad en revistas de humor satírico (como El Mundo Today o El Jueves) tres titulares de noticias ficticias. Analizad por escrito cómo el periodista transgrede intencionadamente la máxima de Cualidad (decir la verdad) para construir el humor, y qué conocimientos necesita el lector para no tomarse la noticia en serio.</p>
                     </div>
                     <div class="task-card">
-                        <h4>📝 Tarea: Teatro del Absurdo</h4>
-                        <p>Escribe un diálogo de 2 minutos donde los personajes violen constantemente las máximas de Grice (cambian de tema, dan información excesiva, mienten descaradamente, son confusos). Representadlo. Analizad por qué la comunicación colapsa.</p>
+                        <h4>📝 Teatro: El Colapso de Grice</h4>
+                        <p>Escribid por parejas un diálogo teatral breve (aprox. 15 líneas) donde los personajes violen sistemáticamente todas las máximas de Grice: cambian de tema sin sentido (Relación), dan detalles excesivos e inútiles (Cantidad), mienten absurdamente (Cualidad) y son confusos (Modo). Leedlo en alto frente a la clase.</p>
                     </div>
                 </div>
             </div>
@@ -400,53 +450,53 @@
         <section id="noverbal">
             <h2>4. El Canal Multimodal y los Elementos No Verbales</h2>
             
-            <p>Se calcula que más del 60% de la información en una interacción cara a cara se transmite sin usar palabras. El canal humano es inherentemente multimodal.</p>
+            <p>Se calcula que más del 60% de la información en una interacción cara a cara se transmite sin usar palabras. La comunicación es profundamente multimodal.</p>
 
             <div class="theory-highlight">
                 <h3>Los Tres Pilares de lo No Verbal</h3>
                 
-                <h4>1. Paralingüística (El cómo se dice)</h4>
-                <p>Son los modificadores fónicos que no son palabras. Incluye: tono de voz, volumen, velocidad de habla, pausas, silencios funcionales, suspiros, risas o carraspeos. Un simple "ya" puede significar comprensión (tono neutro), impaciencia (tono seco y rápido) o ironía (tono alargado: "yaaaa, clarooo").</p>
+                <h4>1. Paralingüística (El sonido no verbal)</h4>
+                <p>Tono de voz, volumen, velocidad, pausas, silencios funcionales, suspiros, risas. Modifican radicalmente el sentido literal de la palabra.</p>
                 
                 <h4>2. Cinésica (El movimiento corporal)</h4>
-                <p>Estudia el lenguaje del cuerpo. Se divide en:</p>
                 <ul>
-                    <li><em>Emblemas:</em> Gestos que sustituyen una palabra (ej. levantar el pulgar).</li>
-                    <li><em>Ilustradores:</em> Gestos que acompañan y recalcan el habla (ej. mover las manos al explicar una dimensión).</li>
-                    <li><em>Reguladores:</em> Gestos para mantener el turno de palabra (ej. asentir, levantar la mano).</li>
-                    <li><em>Adaptadores:</em> Gestos inconscientes de tensión (ej. morderse las uñas, tocarse el pelo).</li>
+                    <li><em>Emblemas:</em> Gestos con traducción literal (levantar el pulgar, gesto de silencio).</li>
+                    <li><em>Ilustradores:</em> Gestos que dibujan lo que hablamos (marcar un tamaño con las manos).</li>
+                    <li><em>Reguladores:</em> Gestos para dar el turno de palabra (asentir con la cabeza).</li>
+                    <li><em>Adaptadores:</em> Gestos inconscientes para liberar estrés (tocarse el cuello, morder un bolígrafo).</li>
                 </ul>
                 
                 <h4>3. Proxémica (El espacio físico)</h4>
-                <p>Creada por el antropólogo Edward T. Hall, estudia cómo usamos el espacio vital. Define cuatro distancias: íntima (0-45 cm), personal (45-120 cm), social (1,2-3 m) y pública (>3 m). La invasión de una zona no autorizada genera estrés y altera profundamente la comunicación.</p>
+                <p>El uso del espacio vital. Distancias: íntima (0-45 cm), personal (45-120 cm), social (1,2-3 m) y pública (>3 m). Invadir la zona incorrecta genera fuerte tensión comunicativa.</p>
             </div>
 
             <!-- ZONA DE RETOS: NO VERBAL -->
             <div class="challenge-zone">
-                <h3>🛠️ Retos de Aula: El Cuerpo Habla</h3>
+                <h3>🛠️ Taller Práctico: El Cuerpo Habla</h3>
                 
                 <details>
-                    <summary>Reto 4.1: Cinésica Muta</summary>
+                    <summary>Reto 4.1: Cinésica Muda (Juego de roles)</summary>
                     <div class="details-content">
-                        <p><strong>Dinámica:</strong> Un voluntario sale a la pizarra. El profesor le susurra un <em>acto ilocutivo</em> (ej. pedir perdón profusamente, intentar vender un coche defectuoso, dar el pésame por compromiso). El alumno debe transmitirlo SIN SONIDO, solo con cinésica y proxémica acercándose a un compañero. El resto de la clase debe adivinar la intención.</p>
+                        <p><strong>Dinámica:</strong> Cread tarjetas de papel con diferentes intenciones pragmáticas secretas (ej. "Pedir perdón tras una traición", "Vender desesperadamente un objeto inútil", "Mostrar superioridad ante un novato", "Consolar por compromiso"). Un voluntario saca una tarjeta y debe interactuar con un compañero <strong>SIN EMITIR NINGÚN SONIDO</strong>, solo usando su postura corporal, gestos (cinésica) y manejo del espacio (proxémica). La clase debe adivinar qué decía la tarjeta.</p>
                     </div>
                 </details>
 
-                <details>
-                    <summary>Reto 4.2: Invasión Proxémica (Experimento)</summary>
-                    <div class="details-content">
-                        <p><strong>Debate y reflexión:</strong> Pensad en el comportamiento humano dentro de un ascensor. ¿Dónde miramos? ¿Cómo nos colocamos si entra un desconocido? ¿Por qué se hace el silencio? Explicad este fenómeno utilizando la teoría de la Proxémica de Hall y la protección de la "burbuja" íntima.</p>
+                <div class="task-grid" style="grid-template-columns: 1fr;">
+                    <div class="task-card">
+                        <h4>🎬 Reto Multimedia: Doblaje Paralingüístico</h4>
+                        <p>Reproducid esta escena clásica del cine. <strong>Bajad el volumen a cero.</strong> Por parejas, debéis inventar y superponer un diálogo en directo a la escena, pero con un giro: cambiad por completo la intención original de la escena modulando vuestro tono, pausas, carraspeos y velocidad (paralingüística). Por ejemplo: convertid lo que parece una situación cómica o neutral en una escena de máxima tensión, misterio o tristeza profunda solo con el uso de vuestra voz.</p>
+                        
+                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-top: 1.5rem; border-radius: 8px; border: 2px solid var(--border-color); background: #000;">
+                            <!-- Marcador de posición estándar de YouTube embebido. Una escena clásica del dominio público de Chaplin ideal para análisis cinésico -->
+                            <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/qNseEVlaCl4?mute=1" title="Cine Mudo - Análisis Cinésico" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                     </div>
-                </details>
+                </div>
 
                 <div class="task-grid">
                     <div class="task-card">
-                        <h4>📝 Tarea: Doblaje Paralingüístico</h4>
-                        <p>Proyectad una escena famosa de una película (ej. Darth Vader confesando su paternidad) con el volumen a cero. Dos alumnos deben doblarla en directo, pero cambiando totalmente la intención original solo modificando el componente paralingüístico (haciéndolo cómico, tímido, histérico). Analizad cómo la voz cambia el guion.</p>
-                    </div>
-                    <div class="task-card">
-                        <h4>📝 Tarea: Etnografía de Cafetería</h4>
-                        <p>Siéntate en el recreo o en una cafetería. Observa (sin escuchar) a dos personas hablando. Redacta un informe de 300 palabras deduciendo su relación social (eje vertical/horizontal) y su estado de ánimo basándote exclusivamente en su proxémica y su cinésica. ¡Pura deducción forense!</p>
+                        <h4>📝 Proyecto de Observación: Etnografía de Cafetería</h4>
+                        <p><strong>Trabajo de campo:</strong> Durante el recreo o en una cafetería, busca a dos o más personas interactuando. Siéntate a una distancia donde puedas verlos claramente pero <em>no escuches</em> el contenido de su conversación. Observa durante 10 minutos. Redacta un informe pericial detallando exclusivamente qué elementos cinésicos y proxémicos intervienen. Concluye deduciendo: ¿qué tipo de relación social tienen (jerárquica o solidaria)? ¿Cuál parece ser el tono emocional del encuentro?</p>
                     </div>
                 </div>
             </div>
@@ -454,8 +504,8 @@
 
         <!-- ==================== SECCIÓN 5: QUIZ JS ==================== -->
         <section id="quiz">
-            <h2>5. Laboratorio Pragmático (Evaluación Interactiva)</h2>
-            <p>Demuestra tu dominio resolviendo estos escenarios comunicativos complejos.</p>
+            <h2>5. Laboratorio Pragmático (Simulador Interactivo)</h2>
+            <p>Pon a prueba tus conocimientos. Analiza cuidadosamente cada escenario y selecciona la respuesta teórica correcta.</p>
 
             <div class="quiz-container">
                 <div class="quiz-header">
@@ -466,7 +516,7 @@
                 <div class="question-text" id="question">Cargando simulador...</div>
                 
                 <div class="options" id="options-container">
-                    <!-- Botones de opciones generados por JS -->
+                    <!-- Botones generados por JS -->
                 </div>
                 
                 <div class="feedback" id="feedback"></div>
@@ -476,83 +526,102 @@
 
     </div>
 
-    <!-- ==================== JAVASCRIPT ==================== -->
+    <!-- ==================== JAVASCRIPT DEL SIMULADOR ==================== -->
     <script>
-        // Banco de preguntas extenso
         const quizData = [
             {
-                q: "Un político pierde unas elecciones estrepitosamente. Al salir a la prensa dice: 'Bueno, los resultados han sido manifiestamente mejorables'. ¿Qué fenómeno pragmático ocurre aquí?",
+                q: "Un político pierde unas elecciones estrepitosamente. Al salir a la prensa dice: 'Bueno, los resultados han sido manifiestamente mejorables'. ¿Qué fenómeno ocurre aquí?",
                 options: [
-                    "Es un acto perlocutivo directo y claro.",
-                    "Viola la máxima de Cualidad para crear ironía (eufemismo irónico).",
+                    "Es un acto perlocutivo directo y claro sin dobles sentidos.",
+                    "Viola la máxima de Cualidad/Cantidad para crear un eufemismo que roza la ironía.",
                     "Es un error de deixis espacial.",
                     "Mantiene un registro excesivamente coloquial."
                 ],
                 correct: 1,
-                explanation: "Al usar 'manifiestamente mejorables' en lugar de 'desastrosos', está jugando con la máxima de Cualidad y Cantidad. Es un eufemismo que funciona casi como ironía por la evidencia del contexto sociohistórico."
+                explanation: "Al evitar palabras como 'desastre', juega con las máximas de Grice. El contexto sociohistórico obliga a los periodistas a inferir la magnitud de la derrota."
             },
             {
-                q: "Estás en clase de Latín y el profesor levanta la mano derecha con la palma abierta hacia los alumnos mientras lee un texto, esperando que se haga el silencio. Este gesto es un elemento cinésico de tipo:",
+                q: "El profesor levanta la mano derecha con la palma abierta hacia los alumnos ruidosos, esperando que se haga el silencio. Este gesto es un elemento cinésico de tipo:",
                 options: [
-                    "Adaptador (libera tensión).",
-                    "Emblema (sustituye palabras, significa 'alto' o 'silencio').",
-                    "Proxémico (marca distancia).",
+                    "Adaptador.",
+                    "Emblema.",
+                    "Proxémico.",
                     "Paralingüístico sonoro."
                 ],
                 correct: 1,
-                explanation: "Es un emblema. Tiene una traducción verbal directa y codificada culturalmente ('parad', 'silencio')."
+                explanation: "Los emblemas son actos no verbales que tienen una traducción verbal directa ('alto', 'parad') conocida por todos los miembros de una cultura."
             },
             {
-                q: "A dice: '¿Vas a venir a mi fiesta el sábado?'. B responde: 'Tengo que estudiar para el examen de Matemáticas'. Según Grice, ¿qué máxima parece violar B en la superficie, generando una implicatura?",
+                q: "A: '¿Vienes a la fiesta el sábado?'. B: 'Tengo examen de Matemáticas el lunes'. Según la teoría pragmática de Grice, ¿qué ocurre en la mente de A?",
                 options: [
-                    "Máxima de Relación, porque parece no responder a lo preguntado.",
-                    "Máxima de Cantidad, porque habla demasiado.",
-                    "No viola ninguna máxima ni genera implicaturas.",
-                    "Falla la deixis de tiempo."
-                ],
-                correct: 0,
-                explanation: "Parece violar la Relación (cambia de tema), pero el receptor, asumiendo que B coopera, infiere la implicatura: 'Tengo que estudiar, POR LO TANTO, no puedo ir'."
-            },
-            {
-                q: "El jefe le dice a su empleado: 'Me encantaría que el informe estuviera listo a las 5'. El empleado sabe que es una orden absoluta. ¿Qué tipo de acto de habla se ha producido?",
-                options: [
-                    "Acto locutivo sin significado.",
-                    "Acto ilocutivo indirecto (una orden disfrazada de deseo por cortesía).",
-                    "Acto ilocutivo directo (una petición formal).",
-                    "Un error del canal de comunicación."
-                ],
-                correct: 1,
-                explanation: "Es indirecto. La forma gramatical es una aseveración de un estado psicológico ('me encantaría'), pero la intención real en el eje de poder (jefe-empleado) es una directiva/orden."
-            },
-            {
-                q: "Una persona se toca constantemente el pelo y se ajusta el cuello de la camisa durante una exposición oral. Estos movimientos son:",
-                options: [
-                    "Ilustradores cinésicos.",
-                    "Adaptadores cinésicos (reflejan nerviosismo o tensión).",
-                    "Elementos paralingüísticos.",
-                    "Invasiones proxémicas del espacio íntimo."
-                ],
-                correct: 1,
-                explanation: "Los adaptadores son gestos, a menudo inconscientes, que utilizamos para manejar nuestras emociones, relajar la tensión o adaptarnos a una situación incómoda."
-            },
-            {
-                q: "Si lees en una nota antigua: 'Mi abuelo plantó este roble mañana', la frase es gramaticalmente absurda debido a un problema con:",
-                options: [
-                    "La distancia social (eje vertical).",
-                    "El registro coloquial.",
-                    "La deixis temporal (incompatibilidad entre el verbo en pasado y el adverbio de futuro).",
-                    "La máxima de cantidad."
+                    "A percibe que B cambia de tema y la comunicación fracasa.",
+                    "A procesa el exceso de información inútil de B.",
+                    "A asume que B coopera e infiere la implicatura ('Tengo que estudiar, no voy').",
+                    "A percibe un fallo en la deixis temporal."
                 ],
                 correct: 2,
-                explanation: "Los deícticos temporales anclan el mensaje. 'Plantó' (pasado) choca de frente con el deíctico 'mañana' (futuro relativo al momento de enunciación)."
+                explanation: "La violación aparente de la máxima de Relación fuerza a A a buscar la conexión lógica, entendiendo el rechazo indirecto a la invitación."
+            },
+            {
+                q: "El director de la empresa le dice a un empleado: 'Me encantaría que el informe estuviera en mi mesa antes de las 5'. ¿Qué tipo de acto de habla es?",
+                options: [
+                    "Acto locutivo sin significado pragmático.",
+                    "Acto ilocutivo indirecto (una orden mitigada por cortesía).",
+                    "Acto ilocutivo directo (una petición de permiso).",
+                    "Un error del canal."
+                ],
+                correct: 1,
+                explanation: "La forma es una declaración de un deseo propio, pero debido a la asimetría de poder (eje vertical), funciona de facto como una orden (directiva)."
+            },
+            {
+                q: "Durante una exposición oral importante, te tocas constantemente el anillo, te ajustas las gafas sin necesidad y jugueteas con el bolígrafo. Estos gestos son:",
+                options: [
+                    "Ilustradores cinésicos.",
+                    "Adaptadores cinésicos (reflejan nerviosismo).",
+                    "Elementos paralingüísticos.",
+                    "Reguladores de turno de palabra."
+                ],
+                correct: 1,
+                explanation: "Los adaptadores son movimientos, a menudo inconscientes, que el cuerpo realiza para canalizar la tensión psicológica o adaptarse a situaciones de estrés."
+            },
+            {
+                q: "Una nota manuscrita hallada en un libro antiguo dice: 'Mi abuelo plantó este roble mañana'. El enunciado es absurdo debido a un problema con:",
+                options: [
+                    "La distancia social.",
+                    "El registro coloquial.",
+                    "La deixis temporal.",
+                    "La máxima de modo de Grice."
+                ],
+                correct: 2,
+                explanation: "Los deícticos temporales organizan el tiempo respecto al momento en que se habla. El pretérito 'plantó' choca irremediablemente con el adverbio de futuro 'mañana'."
+            },
+            {
+                q: "Entras al metro y, aunque está casi vacío, te sientas justo en el asiento de al lado de la única persona que hay en el vagón. Esa persona te mira mal y se levanta. ¿Qué regla has violado?",
+                options: [
+                    "La paralingüística del transporte público.",
+                    "Las normas de la proxémica sobre el espacio personal/íntimo de desconocidos.",
+                    "El principio de cooperación de Grice.",
+                    "El acto locutivo directo."
+                ],
+                correct: 1,
+                explanation: "La proxémica dicta que en espacios públicos abiertos tendemos a maximizar la distancia física con los desconocidos para proteger nuestra zona de confort espacial."
+            },
+            {
+                q: "En un correo al profesor escribes: 'Profe, pasame los apuntes q no fui a clase xfa'. El profesor te contesta pidiendo que reescribas el correo. ¿Cuál es el problema principal?",
+                options: [
+                    "Fallo en el acto locutivo (no se entiende el idioma).",
+                    "Falta de adecuación al eje vertical (uso de registro coloquial extremo y tuteo en ámbito formal/académico).",
+                    "Uso excesivo de elementos cinésicos.",
+                    "Ausencia total de contexto situacional."
+                ],
+                correct: 1,
+                explanation: "La relación alumno-profesor tiene cierta asimetría jerárquica (eje vertical). Usar la misma ortografía y registro que usarías con un amigo por WhatsApp (eje horizontal) resulta inadecuado en este canal."
             }
         ];
 
-        // Estado de la aplicación
         let currentQuestion = 0;
         let score = 0;
 
-        // Elementos DOM
         const questionEl = document.getElementById('question');
         const optionsContainer = document.getElementById('options-container');
         const feedbackEl = document.getElementById('feedback');
@@ -563,7 +632,6 @@
         totalEl.textContent = quizData.length;
 
         function loadQuestion() {
-            // Reset estado UI
             feedbackEl.style.display = 'none';
             nextBtn.style.display = 'none';
             optionsContainer.innerHTML = '';
@@ -585,7 +653,6 @@
             const q = quizData[currentQuestion];
             const allBtns = optionsContainer.querySelectorAll('.option-btn');
             
-            // Deshabilitar todos los botones
             allBtns.forEach(b => b.disabled = true);
 
             if (selectedIndex === q.correct) {
@@ -595,13 +662,13 @@
             } else {
                 btn.classList.add('wrong');
                 allBtns[q.correct].classList.add('correct');
-                showFeedback("Incorrecto. " + q.explanation, false);
+                showFeedback("Revisión necesaria: " + q.explanation, false);
             }
 
             nextBtn.style.display = 'block';
             
             if (currentQuestion === quizData.length - 1) {
-                nextBtn.textContent = 'Ver Evaluación Final';
+                nextBtn.textContent = 'Ver Calificación Final';
             }
         }
 
@@ -609,7 +676,7 @@
             feedbackEl.textContent = text;
             feedbackEl.style.display = 'block';
             feedbackEl.style.backgroundColor = isCorrect ? 'rgba(16, 185, 129, 0.2)' : 'rgba(239, 68, 68, 0.2)';
-            feedbackEl.style.color = isCorrect ? '#a7f3d0' : '#fecaca';
+            feedbackEl.style.color = isCorrect ? '#0f766e' : '#991b1b';
             feedbackEl.style.border = `1px solid ${isCorrect ? '#10b981' : '#ef4444'}`;
         }
 
@@ -628,11 +695,11 @@
             let percentage = (score / quizData.length) * 100;
 
             if (percentage === 100) {
-                msg = "¡Matrícula de Honor! Posees una competencia comunicativa experta. Entiendes las sutilezas de la pragmática a la perfección.";
+                msg = "¡Excelente! Has demostrado un nivel de análisis sobresaliente.";
             } else if (percentage >= 60) {
-                msg = "¡Bien hecho! Dominas los conceptos básicos, aunque algunas inferencias indirectas aún se te escapan. Sigue observando cómo habla la gente a tu alrededor.";
+                msg = "¡Buen trabajo! Dominas las bases prácticas de la teoría de la comunicación.";
             } else {
-                msg = "Necesitas repasar la teoría. Recuerda que la comunicación va mucho más allá de transmitir información literal. Vuelve a leer los apartados de contexto y de intenciones.";
+                msg = "Es importante repasar la teoría de los saberes básicos y volver a intentar el simulador.";
             }
 
             optionsContainer.innerHTML = `
@@ -644,48 +711,28 @@
             
             feedbackEl.style.display = 'none';
             nextBtn.textContent = 'Reiniciar Simulador';
-            nextBtn.onclick = () => {
+            
+            const newBtn = nextBtn.cloneNode(true);
+            nextBtn.parentNode.replaceChild(newBtn, nextBtn);
+            newBtn.addEventListener('click', () => {
                 currentQuestion = 0;
                 score = 0;
                 loadQuestion();
-                nextBtn.onclick = null; // Quitar listener para que use el por defecto de Next
-                // Restaurar el listener original de 'Siguiente'
-                nextBtn.addEventListener('click', nextHandler);
-            };
-            
-            // Función auxiliar para restaurar el flujo del botón
-            function nextHandler() {
-                if (currentQuestion < quizData.length) {
+                
+                const finalBtn = newBtn.cloneNode(true);
+                newBtn.parentNode.replaceChild(finalBtn, newBtn);
+                finalBtn.textContent = 'Siguiente Escenario \u2192';
+                finalBtn.addEventListener('click', () => {
                     currentQuestion++;
-                    if(currentQuestion < quizData.length) {
+                    if (currentQuestion < quizData.length) {
                         loadQuestion();
                     } else {
                         showResults();
                     }
-                }
-            }
-            // Eliminar listeners previos duplicados
-            const newBtn = nextBtn.cloneNode(true);
-            nextBtn.parentNode.replaceChild(newBtn, nextBtn);
-            newBtn.addEventListener('click', () => {
-                currentQuestion++;
-                if (currentQuestion < quizData.length) {
-                    loadQuestion();
-                } else {
-                    showResults();
-                }
+                });
             });
-            // Reasignar variable
-            document.getElementById('next-btn').textContent = 'Reiniciar Simulador';
-            document.getElementById('next-btn').onclick = () => {
-                currentQuestion = 0;
-                score = 0;
-                document.getElementById('next-btn').onclick = null;
-                loadQuestion();
-            };
         }
 
-        // Iniciar
         loadQuestion();
     </script>
 </body>
